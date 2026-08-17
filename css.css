@@ -10,6 +10,89 @@
     font-family: "mincho";
     src: url("BIZUDPMincho-Regular.ttf") format("truetype");
 }
+@media (max-width: 768px) {
+  /* 768px以上で動くCSSを書く */
+  body{
+    background-color: black;
+    color: azure;
+    width: 95%;
+    
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.Enadorry{
+    font-family: "horizon";
+    position: relative;
+    left: 2.5%;
+    z-index: 1; 
+    font-size:10px;
+}
+.MainMiku{
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    right:0% ;
+}
+.Whatis{
+    font-family: "Agrandir";
+    position: relative;
+    top: 150px;
+    left: 2.5%;
+    z-index: 1; 
+    font-size: 30px;
+}
+.kawaii{
+    font-family: "Agrandir";
+    position: absolute;
+    top: 200px;
+    right: 10%;
+    z-index: 1; 
+    font-size: 0px;
+}
+.WhatIsEnadorry{
+    font-family: "horizon";
+    position: relative;
+    top: 150px;
+    left: 2.5%;
+    z-index: 1; 
+    font-size: 50px;
+}
+.SubMiku{
+    position: absolute;
+    top: 500px;
+    left: 50%;
+}
+.jikoshoukai{
+    font-family: "mincho";
+    position: absolute;
+    top: 525px;
+    left:10%;
+    z-index: 2; 
+    font-size: 15px;
+}
+.jikoshoukai2{
+    font-family: "mincho";
+    position: absolute;
+    top: 600px;
+    right: 50%;
+    z-index: 2; 
+    font-size: 15px;
+    text-align: right;
+}
+.Program{
+    font-family: "mincho";
+    position: absolute;
+    top: 700px;
+    left: 10%;
+    z-index: 2; 
+    font-size: 15px;
+}
+}
+
+
+@media (min-width: 768px){
 body{
     background-color: black;
     color: azure;
@@ -86,4 +169,5 @@ img{
     left: 70%;
     z-index: 2; 
     font-size: 50px;
+}
 }
