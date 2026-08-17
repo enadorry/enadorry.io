@@ -38,7 +38,7 @@ img{
 .Whatis{
     font-family: "Agrandir";
     position: relative;
-    top: 150px;
+    top: 200px;
     left: 2.5%;
     z-index: 1; 
     font-size: 30px;
@@ -54,40 +54,40 @@ img{
 .WhatIsEnadorry{
     font-family: "horizon";
     position: relative;
-    top: 150px;
+    top: 200px;
     left: 2.5%;
     z-index: 1; 
     font-size: 50px;
 }
 .SubMiku{
     position: absolute;
-    top: 500px;
-    left: 50%;
+    top: 550px;
+    left: 60%;
 }
 .jikoshoukai{
     font-family: "mincho";
     position: absolute;
-    top: 525px;
+    top: 565px;
     left:10%;
     z-index: 2; 
-    font-size: 15px;
+    font-size: 20px;
 }
 .jikoshoukai2{
     font-family: "mincho";
     position: absolute;
-    top: 600px;
-    right: 50%;
+    top: 675px;
+    right: 40%;
     z-index: 2; 
-    font-size: 15px;
+    font-size: 20px;
     text-align: right;
 }
 .Program{
     font-family: "mincho";
     position: absolute;
-    top: 700px;
+    top: 800px;
     left: 10%;
     z-index: 2; 
-    font-size: 15px;
+    font-size: 20px;
 }
 }
 
@@ -166,7 +166,7 @@ img{
     font-family: "mincho";
     position: absolute;
     top: 1800px;
-    left: 70%;
+    left: 65%;
     z-index: 2; 
     font-size: 50px;
 }
