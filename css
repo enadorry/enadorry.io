@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "horizon";
+    src: url("Horizon_Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Agrandir";
+    src: url("Agrandir-Narrow.otf") format("truetype");
+}
+@font-face {
+    font-family: "mincho";
+    src: url("BIZUDPMincho-Regular.ttf") format("truetype");
+}
+body{
+    background-color: black;
+    color: azure;
+    width: 95%;
+    
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.Enadorry{
+    font-family: "horizon";
+    position: relative;
+    left: 2.5%;
+    z-index: 1; 
+    font-size: 30px;
+}
+.MainMiku{
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    right:0% ;
+}
+.Whatis{
+    font-family: "Agrandir";
+    position: relative;
+    top: 100px;
+    left: 2.5%;
+    z-index: 1; 
+    font-size: 45px;
+}
+.kawaii{
+    font-family: "Agrandir";
+    position: absolute;
+    top: 200px;
+    right: 10%;
+    z-index: 1; 
+    font-size: 45px;
+}
+.WhatIsEnadorry{
+    font-family: "horizon";
+    position: relative;
+    top: 700px;
+    left: 2.5%;
+    z-index: 1; 
+    font-size: 50px;
+}
+.SubMiku{
+    position: absolute;
+    top: 1100px;
+    left: 37.5%;
+}
+.jikoshoukai{
+    font-family: "mincho";
+    position: absolute;
+    top: 1250px;
+    left:60%;
+    z-index: 2; 
+    font-size: 50px;
+}
+.jikoshoukai2{
+    font-family: "mincho";
+    position: absolute;
+    top: 1450px;
+    right: 65%;
+    z-index: 2; 
+    font-size: 50px;
+    text-align: right;
+}
+.Program{
+    font-family: "mincho";
+    position: absolute;
+    top: 1800px;
+    left: 70%;
+    z-index: 2; 
+    font-size: 50px;
+}
