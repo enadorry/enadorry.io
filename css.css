@@ -10,6 +10,18 @@
     font-family: "mincho";
     src: url("BIZUDPMincho-Regular.ttf") format("truetype");
 }
+p {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+a,a:visited{
+    color: #ffffff;
+}
 @media (max-width: 768px) {
   /* 768px以上で動くCSSを書く */
   body{
@@ -109,6 +121,8 @@ img{
     left: 2.5%;
     z-index: 1; 
     font-size: 30px;
+    color: white;
+    mix-blend-mode: difference;
 }
 .MainMiku{
     position: absolute;
@@ -123,6 +137,9 @@ img{
     left: 2.5%;
     z-index: 1; 
     font-size: 45px;
+    font-weight: bold;
+    color: white;
+    mix-blend-mode: difference;
 }
 .kawaii{
     font-family: "Agrandir";
@@ -131,43 +148,101 @@ img{
     right: 10%;
     z-index: 1; 
     font-size: 45px;
+    color: white;
+    mix-blend-mode: difference;
 }
 .WhatIsEnadorry{
     font-family: "horizon";
     position: relative;
     top: 700px;
     left: 2.5%;
-    z-index: 1; 
+    z-index: 2; 
     font-size: 50px;
+    color: white;
+    mix-blend-mode: difference;
 }
 .SubMiku{
     position: absolute;
     top: 1100px;
     left: 37.5%;
+    z-index: 1;
 }
 .jikoshoukai{
     font-family: "mincho";
     position: absolute;
     top: 1250px;
-    left:60%;
+    left:50%;
     z-index: 2; 
-    font-size: 50px;
+    font-size: 40px;
+    color: white;
+    mix-blend-mode: difference;
 }
 .jikoshoukai2{
     font-family: "mincho";
     position: absolute;
-    top: 1450px;
-    right: 65%;
+    top: 1425px;
+    right:50%;
     z-index: 2; 
-    font-size: 50px;
+    font-size: 40px;
     text-align: right;
+    color: white;
+    mix-blend-mode: difference;
 }
 .Program{
     font-family: "mincho";
     position: absolute;
-    top: 1800px;
-    left: 65%;
+    top: 1625px;
+    left:50%;
     z-index: 2; 
-    font-size: 50px;
+    font-size: 40px;
+    color: white;
+    mix-blend-mode: difference;
 }
+.arukumiku{
+    position: absolute;
+    top: 1900px;
+    left: 0%;
+    z-index: 0;
+}
+.make{
+    font-family: "horizon";
+    position: absolute;
+    top: 2200px;
+    left: 10%;
+    font-size: 50px;
+    color: white;
+    mix-blend-mode: difference;
+}
+.making{
+    font-family: "mincho";
+    position: absolute;
+    top: 2350px;
+    left:15%;
+    z-index: 2; 
+    font-size: 40px;
+    color: white;
+    mix-blend-mode: difference;
+    line-height: 2;
+}
+.SNS{
+    font-family: "horizon";
+    position: absolute;
+    top: 2800px;
+    left: 10%;
+    font-size: 50px;
+    color: white;
+    mix-blend-mode: difference;
+}
+.SNSLink{
+    font-family: "mincho";
+    position: absolute;
+    top: 2900px;
+    left:15%;
+    z-index: 2; 
+    font-size: 40px;
+    color: white;
+    mix-blend-mode: difference;
+    line-height: 2;
+}
+
 }
