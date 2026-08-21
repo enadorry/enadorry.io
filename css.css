@@ -27,7 +27,7 @@ a,a:visited{
   body{
     background-color: black;
     color: azure;
-    width: 95%;
+    width: 100%;
     
 }
 img{
@@ -100,6 +100,62 @@ img{
     left: 10%;
     z-index: 2; 
     font-size: 20px;
+}
+.arukumiku{
+    position: absolute;
+    top: 900px;
+    z-index: 0;
+}
+.make{
+    font-family: "horizon";
+    position: absolute;
+    top: 900px;
+    left: 10%;
+    font-size: 25px;
+    color: white;
+    mix-blend-mode: difference;
+}
+.making{
+    font-family: "mincho";
+    position: absolute;
+    top: 950px;
+    left:12.5%;
+    z-index: 2; 
+    font-size: 15px;
+    color: white;
+    mix-blend-mode: difference;
+    line-height: 2;
+}
+.SNS{
+    font-family: "horizon";
+    position: absolute;
+    top: 1250px;
+    left: 10%;
+    font-size: 25px;
+    color: white;
+    mix-blend-mode: difference;
+}
+.SNSLink{
+    font-family: "mincho";
+    position: absolute;
+    top: 1300px;
+    left:15%;
+    z-index: 2; 
+    font-size: 15px;
+    color: white;
+    mix-blend-mode: difference;
+    line-height: 2;
+}
+.mamechishiki{
+    font-family: "mincho";
+    position: absolute;
+    top: 1500px;
+    left:5%;
+    z-index: 2; 
+    font-size: 15px;
+    color: white;
+    mix-blend-mode: difference;
+    line-height: 2;
 }
 }
 
@@ -244,5 +300,15 @@ img{
     mix-blend-mode: difference;
     line-height: 2;
 }
-
+.mamechishiki{
+    font-family: "mincho";
+    position: absolute;
+    top: 4000px;
+    left:15%;
+    z-index: 2; 
+    font-size: 40px;
+    color: white;
+    mix-blend-mode: difference;
+    line-height: 2;
+}
 }
