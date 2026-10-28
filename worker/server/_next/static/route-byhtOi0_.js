@@ -1,0 +1,1 @@
+import{n as e,t}from"./notes-Cl-UdTgk.js";var n=`force-dynamic`;async function r(n){try{return t(n,{items:await e(),profile:`https://note.com/enadorry`})}catch{return t(n,{error:`unavailable`},503)}}export{r as GET,n as dynamic};

@@ -1,0 +1,1 @@
+function e(e){return Response.redirect(new URL(`/index.html`,e.url),302)}export{e as GET};

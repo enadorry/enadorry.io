@@ -1,0 +1,1 @@
+import{a as e,d as t,s as n,t as r}from"./spotify-C8gq6h-9.js";var i=`force-dynamic`;async function a(i){try{return await t(),e(i,n(await r()))}catch{return e(i,{items:[],status:`unavailable`},503)}}export{a as GET,i as dynamic};

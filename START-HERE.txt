@@ -1,0 +1,28 @@
+enadorry Cloudflare公開用 2026-10-28
+
+20枚ランダム背景、約1秒ロード、猫のアイコン、egawa shuuhei・誕生日、Discord連絡先、
+白黒SNSアイコン、3種類ランダムMoe Counterを含む最新版です。
+
+【画面だけをPagesにアップロードする場合】
+direct-upload フォルダを指定。index.htmlが直下にあります。
+workerフォルダやwrangler.jsoncはドラッグする画面に入れないでください。
+Moe Counterは外部サービスなのでD1不要です。
+静的アップロードのみではnote自動取得・Spotify・SNS管理APIは動きません。
+
+【note自動取得も使う場合：Workers】
+Node.jsをインストールし、workerフォルダでターミナルを開く。
+1. npm install
+2. npx wrangler login
+3. npx wrangler d1 create enadorry-portfolio （既存DBを使用する場合は不要）
+4. wrangler.jsoncのREPLACE_WITH_YOUR_D1_DATABASE_IDを、D1のIDに変更。
+5. 新規DBのみ：npx wrangler d1 execute enadorry-portfolio --remote --file schema.sql
+   同じ構造の既存DBにはschema.sqlを実行しないでください。
+6. npm run deploy
+7. 公開結果を確認後、Cloudflareの設定でenadorry.devをカスタムドメインに指定。
+workerとdirect-uploadの位置関係は変更しないでください。
+
+ChatGPT Sitesの認証はCloudflareに引き継がれません。管理APIは利用不可です。
+管理画面・Spotify接続にはCloudflare用認証の別途設定が必要です。
+偽装したSites認証ヘッダーは除去します。
+秘密鍵・認証情報・既存のD1データは含みません。
+Cloudflareへの実アップロードはまだ行っていません。

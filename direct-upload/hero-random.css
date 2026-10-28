@@ -1,0 +1,3 @@
+.hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition:none;pointer-events:none}.image-ready .hero-art{opacity:1}.image-ready .aurora-fallback{visibility:hidden}.aurora-scene:not(.in-mirror) canvas{display:none}.in-mirror.ready .hero-art{opacity:0}.in-mirror.ready canvas{display:block;opacity:1}@media(max-width:760px){.hero-art{object-position:66% center}}@media(prefers-reduced-motion:reduce){.hero-art{transition:none}}
+
+.aurora-scene.image-mode .aurora-fallback{visibility:hidden}

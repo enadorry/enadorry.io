@@ -1,0 +1,32 @@
+{
+  "name": "enadorry-portfolio",
+  "main": "entry.js",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "no_bundle": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": [
+        "**/*.js",
+        "**/*.mjs"
+      ]
+    }
+  ],
+  "assets": {
+    "directory": "../direct-upload",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "enadorry-portfolio",
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+    }
+  ]
+}
