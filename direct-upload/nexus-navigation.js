@@ -1,0 +1,4 @@
+(()=>{'use strict';const nav=document.querySelector('.n-nav'),menu=document.querySelector('.n-menu');if(!nav||!menu)return;
+const close=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.innerHTML='MENU <span>＋</span>';};
+menu.addEventListener('click',()=>{const open=!nav.classList.contains('open');nav.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.innerHTML=open?'CLOSE <span>−</span>':'MENU <span>＋</span>';if(open)requestAnimationFrame(()=>nav.querySelector('a')?.focus());});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('open')){close();menu.focus();}});matchMedia('(min-width:901px)').addEventListener('change',e=>{if(e.matches)close();});})();
