@@ -45,10 +45,10 @@
       if (rows.childNodes.length) {
         list.replaceChildren(rows); status.textContent = '';
       } else if (!list.children.length) {
-        status.textContent = data.status === 'not_connected' ? 'Spotifyの接続準備中です。' : data.status === 'reconnect_required' ? 'Spotifyの再接続を待っています。' : '再生した曲はここに表示されます。';
+        status.textContent = data.status === 'not_connected' ? 'Spotifyにつなぐ準備をしています。' : data.status === 'reconnect_required' ? 'Spotifyにつなぎ直すのを待っています。' : '聴いた曲が、ここに並びます。今はまだ空っぽです。';
       }
     } catch {
-      if (!list.children.length) status.textContent = '曲の一覧を読み込めませんでした。しばらくしてからお試しください。';
+      if (!list.children.length) status.textContent = '曲をうまく読み込めませんでした。少し待ってから、もう一度どうぞ。';
     }
   }
   let configPromise;
@@ -64,3 +64,4 @@
   }
   load(); setInterval(() => { if (!document.hidden) load(); }, 300000);
 })();
+

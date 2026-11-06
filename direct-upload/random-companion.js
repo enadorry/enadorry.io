@@ -52,7 +52,7 @@
     preload.onerror = () => {
       if (request !== ticket) return;
       shuffle.disabled = false;
-      label.textContent = '画像を読み込めませんでした。もう一度切り替えてください。';
+      label.textContent = '画像がうまく開けませんでした。もう一度、切り替えてみてください。';
     };
     preload.src = `/assets/companion-art/${pet.slug}-${style}.webp`;
   };
@@ -65,3 +65,4 @@
     label.textContent = 'Shizuku / COMPANION';
   });
 })();
+
