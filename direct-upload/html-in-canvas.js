@@ -178,7 +178,7 @@
 
   }
   // Split only at normal document-flow boundaries; each grid and every form stays intact.
-  function sources(){return [...document.querySelectorAll('main>section, .detail-main>header, .detail-main>figure, .detail-main>div:not(#home), .detail-main>section, .detail-main>a.next-work, body>.n-header, body>.footer, body>.pixel-companions, body>.sound-dock')];}
+  function sources(){return [...document.querySelectorAll('main>section, .detail-main>header, .detail-main>figure, .detail-main>div:not(#home), .detail-main>section, .detail-main>p, .detail-main>a.next-work, body>.n-header, body>.footer, body>.pixel-companions, body>.sound-dock')];}
   sources().forEach(enhance);
   if(initialHash)requestAnimationFrame(()=>requestAnimationFrame(()=>alignAnchor(initialHash)));
   mobile.addEventListener('change',()=>{
