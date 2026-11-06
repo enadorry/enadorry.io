@@ -1,0 +1,60 @@
+/* Black glass: shared by the home page and every project page. */
+:root{--glass-fill:rgba(12,17,21,.60);--glass-line:rgba(224,239,255,.18);--glass-edge:rgba(255,255,255,.26)}
+html,body,body:not(.nexus-home){background:#000}
+body{isolation:isolate}
+.lg-atmosphere{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;background:#000}
+.n-hero,.n-section,.n-journey,.footer,.pixel-companions,.detail-main{background:transparent}
+.n-header{background:rgba(5,9,12,.66);border-bottom:1px solid var(--glass-line);backdrop-filter:blur(24px) saturate(135%);-webkit-backdrop-filter:blur(24px) saturate(135%);box-shadow:inset 0 1px 0 #ffffff14}
+.n-nav.open{background:rgba(8,13,18,.94);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-color:var(--glass-line)}
+:is(.linear-showcase,.n-map,.sound-card,.listening,.mutual-links,.detail-info,.room-intro,.feature-project,.next-work,.unity-project){background:linear-gradient(128deg,#e2f7ff0d,transparent 42%,#a5baff05),var(--glass-fill);border:1px solid var(--glass-line);border-radius:22px;box-shadow:inset 0 1px 0 #ffffff1f,inset 0 -1px 0 #ffffff08;backdrop-filter:blur(18px) saturate(125%);-webkit-backdrop-filter:blur(18px) saturate(125%)}
+.linear-toolbar{border-color:#dceeff1a;color:#c5ced7}
+.linear-workspace{background:transparent}
+.linear-project-list{background:#05090b24;border-color:#dceeff18}
+.linear-project-preview{background:transparent}
+.linear-project-preview>img{background:#00000052;border-color:#dceeff18;border-radius:14px}
+.linear-project-list button{border:1px solid transparent;border-radius:12px;transition:background .25s,border-color .25s}
+.linear-project-list button:hover,.linear-project-list button[aria-pressed=true]{background:linear-gradient(125deg,#ffffff12,#ffffff04);border-color:#e3f3ff24;box-shadow:inset 0 1px 0 #ffffff12}
+.linear-project-description>a,.paper-shortcuts a,.n-map-node,.n-room-tabs button,.garden-controls button,.text-link,.filled-button,.ghost-button,.outline-button{background:linear-gradient(135deg,#ffffff0c,#ffffff03);border-color:#e3f3ff2b;border-radius:10px;color:#e9eef4}
+.paper-shortcuts a{border-radius:999px;color:#c4cdd6}
+.n-map-node.active,.n-room-tabs button[aria-selected=true]{background:linear-gradient(125deg,#ffffff23,#ffffff09);border-color:#dceeff50}
+.n-map svg{color:#dceeff2b}
+.n-map-caption{color:#b5c2cd}
+.n-room-image,.n-concept-art{border:1px solid #e3f3ff20;border-radius:18px;background:#00000080;box-shadow:inset 0 1px 0 #ffffff14}
+.n-room-image img,.n-concept-art img,.profile-photo{border-radius:18px}
+.n-about .about-card{padding:clamp(20px,3vw,36px);border:1px solid var(--glass-line);border-radius:22px;background:linear-gradient(125deg,#ffffff09,#ffffff02),#080d1280}
+.profile-photo{border:1px solid #ffffff18}
+.sound-controls select,.sound-dock button{background:#ffffff09;border-color:#dceeff24;border-radius:10px}
+.sound-dock{left:auto;right:24px;bottom:20px;transform:none;max-width:calc(100% - 48px);background:linear-gradient(125deg,#ffffff12,#ffffff04),rgba(5,10,15,.85);border:1px solid #e4f3ff30;border-radius:18px;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:inset 0 1px 0 #ffffff24}
+.note-entry{border-color:#dceeff26}
+.note-open{border-radius:12px;transition:background .2s}
+.note-open:hover{background:#ffffff06!important}
+.note-reader{background:linear-gradient(140deg,#ffffff0e,#ffffff03),#080c12f5;border-color:#e1f1ff38;border-radius:22px;backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px)}
+.socials>a{border-color:#dceeff26;border-radius:10px}
+.socials>a:hover{background:#ffffff09}
+.n-faq details{border-color:#dceeff26}
+.garden{background:linear-gradient(140deg,#ffffff07,#ffffff02),#02080bd9!important;border:1px solid var(--glass-line)!important;border-radius:22px!important}
+.garden-speech,.hero-reaction{background:#101a24ed!important;border-color:#e4f3ff3d!important;box-shadow:inset 0 1px 0 #ffffff14}
+.detail-figure{border:1px solid #e3f3ff20;border-radius:18px;overflow:hidden;background:#0008}
+.project-section{border-top-color:#dceeff26}
+.footer{border-top:1px solid #dceeff20}
+.lg-canvas-shell{position:relative;min-width:0;box-sizing:border-box;isolation:isolate;scroll-margin-top:90px}
+.lg-page-canvas{display:block;position:absolute;inset:0;width:100%;height:100%;background:transparent;touch-action:pan-y}
+.lg-canvas-shell[data-layout=hero],.lg-canvas-shell[data-layout=section]{width:min(1200px,calc(100% - 48px));margin-inline:auto}
+.lg-canvas-shell[data-layout=showcase]{width:min(1264px,calc(100% - 48px));margin-inline:auto}
+.lg-canvas-shell[data-layout=full]{width:100%}
+.lg-canvas-shell[data-layout=footer]{width:min(1248px,100%);margin-inline:auto}
+.lg-canvas-shell[data-layout=pets]{width:min(1380px,100%);margin-inline:auto}
+.lg-canvas-shell[data-layout=detail]{width:100%}
+.lg-canvas-shell[data-layout=header]{position:fixed;inset:0 0 auto;z-index:80;width:100%;height:64px}
+.lg-canvas-shell[data-layout=dock]{position:fixed;right:24px;bottom:20px;z-index:70;max-width:calc(100% - 48px)}
+.lg-page-canvas>[drawable]{box-sizing:border-box;width:100%!important;max-width:none!important;margin:0!important}
+.lg-page-canvas>.n-header{position:relative;inset:auto}
+.lg-page-canvas>.sound-dock{position:relative;inset:auto;max-width:none;transform:none}
+@media(max-width:900px){.n-map-panel{position:static}.sound-dock{right:16px;bottom:14px}}
+@media(max-width:600px){.lg-canvas-shell[data-layout=hero],.lg-canvas-shell[data-layout=section]{width:calc(100% - 40px)}.lg-canvas-shell[data-layout=showcase]{width:calc(100% - 32px)}.sound-dock,.lg-canvas-shell[data-layout=dock]{right:12px;bottom:12px;max-width:calc(100% - 24px)}.n-about .about-card{padding:20px}.linear-project-preview>img{border-radius:10px}.linear-showcase,.sound-card,.mutual-links,.listening,.detail-info,.room-intro{border-radius:18px}}
+@media(prefers-reduced-transparency:reduce){:is(.n-header,.linear-showcase,.n-map,.sound-card,.listening,.mutual-links,.detail-info,.room-intro,.sound-dock,.note-reader){background:#080c10;backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media print{.lg-atmosphere{display:none}.lg-canvas-shell{height:auto!important;position:static!important;max-width:none!important;width:100%!important}.lg-page-canvas{display:contents}.lg-page-canvas>[drawable]{display:revert!important;width:100%!important}.sound-dock,.n-header{display:none!important}}
+/* Keep backdrop compositing outside drawable snapshots; translucent fills remain live. */
+.lg-page-canvas [drawable],.lg-page-canvas [drawable] *{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.lg-page-canvas>[drawable]{position:absolute!important;inset:0 auto auto 0!important;contain:layout paint}
+body{overflow-anchor:none}.n-header{z-index:1000;transform:translateZ(0)}
