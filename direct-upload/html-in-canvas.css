@@ -1,0 +1,4 @@
+.hic-host{position:relative;min-width:0;background:#000;align-self:start}
+.hic-canvas{display:block;width:100%;height:100%;position:absolute;inset:0;background:#000}
+.hic-canvas>.linear-project-preview{box-sizing:border-box;margin:0;background:#000}
+@media print{.hic-host{height:auto!important}.hic-canvas{display:contents}.hic-canvas>.linear-project-preview{display:block;width:auto!important}}
