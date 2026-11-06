@@ -1,4 +1,11 @@
-.hic-host{position:relative;min-width:0;background:#000;align-self:start}
-.hic-canvas{display:block;width:100%;height:100%;position:absolute;inset:0;background:#000}
+.hic-host{position:relative;min-width:0;background:#000;align-self:start;overflow:hidden}
+.hic-canvas{display:block;width:100%;height:100%;position:absolute;inset:0;background:#000;touch-action:pan-y}
 .hic-canvas>.linear-project-preview{box-sizing:border-box;margin:0;background:#000}
-@media print{.hic-host{height:auto!important}.hic-canvas{display:contents}.hic-canvas>.linear-project-preview{display:block;width:auto!important}}
+.hic-effects{display:flex;gap:4px;padding:10px 16px;border-bottom:.5px solid #23252a;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#383b3f #000;background:#000}
+.hic-effects button{flex:0 0 auto;min-height:36px;padding:7px 12px;border:.5px solid transparent;border-radius:6px;background:transparent;color:#8a8f98;font:400 12px/1.4 system-ui,sans-serif;white-space:nowrap;cursor:pointer}
+.hic-effects button:hover{color:#fff;background:#0f1011}
+.hic-effects button[aria-pressed=true]{color:#fff;background:#161718;border-color:#383b3f}
+.hic-effects button:focus-visible{outline:2px solid #e4f222;outline-offset:2px}
+@media(max-width:600px){.hic-effects{padding:8px;gap:2px}.hic-effects button{min-height:44px;padding:8px 12px}}
+@media(prefers-reduced-motion:reduce){.hic-canvas{scroll-behavior:auto}}
+@media print{.hic-effects{display:none}.hic-host{height:auto!important}.hic-canvas{display:contents}.hic-canvas>.linear-project-preview{display:block;width:auto!important}}
