@@ -115,6 +115,10 @@
   }
   function enhance(source){
     if(source.dataset.pageRenderer||source.closest('canvas')||source.matches('.n-statement')||source.offsetHeight<2||getComputedStyle(source).display==='none')return;
+    // Keep the external counter SVG in normal HTML: a native canvas snapshot can
+    // omit it even after the image has loaded successfully. This also preserves
+    // the provider's animation without fetching or counting the visit again.
+    if(source.querySelector('.moe-counter-image'))return;
     // Mobile dropdowns stay in normal HTML, outside the canvas clipping box.
     if(source.matches('.n-header'))return;
     const kind=layout(source),rect=source.getBoundingClientRect(),style=getComputedStyle(source);
