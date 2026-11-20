@@ -40,3 +40,33 @@ p+p{margin-top:.85em}.spread,.columns,.profile-spread,.colophon{display:grid;ali
  body:not(.n-paused) .work summary:hover{color:var(--red);transform:translateX(4px)}
 }
 @media(max-width:760px){.spread,.columns,.profile-spread,.colophon{grid-template-columns:1fr}.lead{order:2}.journal{border:0;padding:0}.feature figcaption{display:block}.feature figcaption a{display:inline-block;margin-top:.5em}.mast nav{order:3;width:100%}.work summary{grid-template-columns:6.6em 1fr auto}.sound-card{display:block;padding:20px}.sound-controls{margin-top:1em}}
+
+/* DesignBookmark motion studies, adapted to the printed edition. */
+.reading-rule{position:fixed;inset:0 0 auto;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;pointer-events:none;z-index:8}
+.nameplate h1 span{display:inline-block}
+.roll-link{position:relative;overflow:hidden;line-height:1.6}
+.roll-link span{display:block}.roll-link span+span{position:absolute;inset:100% 0 auto;color:var(--red)}
+.selector{position:relative;isolation:isolate}.project-marker{position:absolute;z-index:-1;pointer-events:none;background:#fa6043;transform-origin:0 0}
+.selector:has(.project-marker) button[aria-pressed=true]{background:transparent}
+.feature{overflow:hidden}#linear-project-image{touch-action:pan-y;user-select:none;cursor:grab}#linear-project-image:active{cursor:grabbing}
+#linear-project-link,.lead>a,.copy-mail+span{display:inline-block}
+.copy-mail{margin:.65rem 0;border:1px solid var(--ink);padding:.4rem .8rem;background:transparent;font:inherit}
+#sound-volume-out{display:inline-block;font-variant-numeric:tabular-nums}
+#sound-auto{appearance:none;width:2.35rem;height:1.35rem;border:1px solid #ababab;border-radius:1rem;background:#444;position:relative;cursor:pointer;flex:none}
+#sound-auto::after{content:'';position:absolute;left:2px;top:2px;width:calc(1.35rem - 6px);aspect-ratio:1;border-radius:50%;background:white}
+#sound-auto:checked{background:var(--red)}#sound-auto:checked::after{translate:1rem 0}
+@keyframes weight-beat{0%,100%{font-weight:690}48%{font-weight:910;translate:0 -.022em}}
+@keyframes reader-in{from{opacity:0;transform:translateY(18px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes ink-in{from{background-size:0% 1px}to{background-size:100% 1px}}
+@media(prefers-reduced-motion:no-preference){
+ body:not(.n-paused) .nameplate h1 span{animation:weight-beat .9s calc(var(--beat)*65ms) both}
+ body:not(.n-paused) .roll-link span{transition:transform .32s cubic-bezier(.2,.8,.2,1)}
+ body:not(.n-paused) .roll-link:is(:hover,:focus-visible) span{transform:translateY(-100%)}
+ body:not(.n-paused) #sound-auto::after{transition:translate .28s cubic-bezier(.25,1.5,.45,1)}
+ body:not(.n-paused) :is(.profile-photo,.sound-dock button,#linear-project-link,.lead>a){transition:transform .16s ease-out}
+ body:not(.n-paused) .note-reader[open]{animation:reader-in .28s ease-out}
+ body:not(.n-paused) .note-open:is(:hover,:focus-visible) .note-title{background:linear-gradient(var(--red),var(--red)) bottom left/100% 1px no-repeat;animation:ink-in .3s ease-out}
+ body:not(.n-paused) .work summary::after{transition:rotate .26s ease}
+ body:not(.n-paused) .work[open] summary::after{rotate:180deg}
+}
+body.n-paused :is(.profile-photo,.sound-dock button,#linear-project-link,.lead>a,#linear-project-image){transform:none!important;translate:none!important}
