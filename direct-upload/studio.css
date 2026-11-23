@@ -1,0 +1,13 @@
+:root{color-scheme:dark}
+body,body.nexus-home,body.detail-page{background:#111623;color:#eaf0fb}
+main{--paper:#182131;--ink:#edf1fa;--rule:#516078;--red:#8cdccb}
+.studio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(18px,4vw,68px);align-items:start}
+.console{position:sticky;top:1rem;padding:clamp(16px,2vw,34px);border:1px solid #465368;border-radius:24px;background:linear-gradient(140deg,#283649,#172030)}
+.console .nameplate{border:0}.console h1{font-size:clamp(48px,7vw,110px);letter-spacing:-.07em;color:#acf6df}
+.console .spread{display:flex;flex-direction:column-reverse;padding:1rem 0 0;border:0;gap:20px}.console .feature{width:100%;background:#0c121b;color:white;border-radius:12px}.console .feature img{height:clamp(130px,17vw,220px)}
+.console .lead h2{font-size:1.5rem}.rack .columns{display:block;padding:1rem 0}.rack .journal{border:0;padding:2rem 0}
+.work{border:1px solid #485772;border-radius:12px;background:#202b40;margin:.7rem 0;padding:0 1rem}.work[open]{background:#263b49}.work summary{grid-template-columns:7em 1fr auto}
+body .mast{color:#dce6f7}.mast button,.copy-mail{color:inherit;border-color:#7b8ca0}
+body .note-excerpt{color:#b8c6d5}body .project-marker{background:#9aefce}
+.detail-main .detail-heading{border-left:5px solid #9aefce;padding-left:1em}.detail-main :is(.detail-info,.project-section,.unity-project){background:#182436;color:#eef4ff;border:1px solid #43516a;border-radius:16px;padding:clamp(15px,3vw,40px)}
+@media(max-width:850px){.studio{display:block}.console{position:static}.rack .columns{padding-block:2rem}.console h1{font-size:clamp(52px,14vw,100px)}}
