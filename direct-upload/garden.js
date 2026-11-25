@@ -160,7 +160,8 @@
     }
     place(pet);paint(pet);
   }
-  function running() {return visible && !document.hidden && !paused && !reduced.matches;}
+  function pagePaused() { return document.body.classList.contains("still"); }
+  function running() {return !pagePaused() && visible && !document.hidden && !paused && !reduced.matches;}
   function tick(now) {
     raf=0;
     if(!running()) {previousTime=0;return;}
@@ -183,7 +184,8 @@
     pauseButton.setAttribute('aria-pressed',String(paused||reduced.matches));
     pauseButton.textContent=(paused||reduced.matches)?'動きを再開する':'動きを止める';
     if(reduced.matches) pauseButton.textContent='動きを減らす設定を使用中';
-    pauseButton.disabled=reduced.matches;
+    if(pagePaused()) pauseButton.textContent='ページの動きを停止中';
+    pauseButton.disabled=reduced.matches || pagePaused();
   }
   function layout() {
     width=garden.clientWidth; height=garden.clientHeight;
@@ -298,6 +300,7 @@
   document.addEventListener('visibilitychange',()=>{if(document.hidden && activeDrag) finishDrag(activeDrag,true);if(!document.hidden) refreshTime();start();});
   // Minute updates use wall-clock time; animation stays on the existing visible-only scheduler.
   setInterval(()=>{if(!document.hidden){refreshTime();start();}},60000);
+  window.addEventListener('enadorry-motion',()=>{syncPause();start();});
   reduced.addEventListener('change',()=>{syncPause();pets.forEach(paint);start();});
   syncPause();
 })();

@@ -23,7 +23,7 @@
     reactionTimer = setTimeout(() => heroButton.classList.remove('is-reacting'), 1900);
   });
   function blink() {
-    heroButton.classList.add('is-blinking');
+    if (!document.body.classList.contains('still') && !reduceMotion.matches) heroButton.classList.add('is-blinking');
     setTimeout(() => {
       heroButton.classList.remove('is-blinking');
       setTimeout(blink, 2600 + Math.random() * 2700);
@@ -43,7 +43,7 @@
   }, { passive:true });
   function animate(now) {
     cursorRaf = 0;
-    if (pet.hidden || document.hidden) return;
+    if (pet.hidden || document.hidden || document.body.classList.contains('still')) return;
     const moving = !coarse.matches && !reduceMotion.matches && now < moveUntil;
     const ease = reduceMotion.matches ? 1 : .13;
     x += (targetX - x) * ease; y += (targetY - y) * ease;
@@ -68,6 +68,7 @@
     if (!pet.hidden && !sheet.src) sheet.src = '/assets/shizuku.webp';
     startCursor();
   });
+  window.addEventListener('enadorry-motion',startCursor);
   document.addEventListener('visibilitychange', startCursor);
 })();
 
