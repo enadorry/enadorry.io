@@ -1,0 +1,11 @@
+const motionButton=document.getElementById('motion');
+const preference=matchMedia('(prefers-reduced-motion: reduce)');
+function syncMotion(){const paused=preference.matches||localStorage.getItem('transit-pause')==='1';document.documentElement.toggleAttribute('data-still',paused);motionButton.setAttribute('aria-pressed',String(paused));motionButton.textContent=preference.matches?'動きを軽減中（OS設定）':paused?'動きを再開':'動きを止める';motionButton.disabled=preference.matches;if(paused)document.getAnimations().forEach(a=>a.cancel())}
+syncMotion();preference.addEventListener('change',syncMotion);
+motionButton.addEventListener('click',()=>{localStorage.setItem('transit-pause',document.documentElement.hasAttribute('data-still')?'0':'1');syncMotion()});
+const headings=new IntersectionObserver(entries=>{for(const e of entries)if(e.isIntersecting){e.target.classList.add('seen');headings.unobserve(e.target)}});document.querySelectorAll('h2').forEach(h=>headings.observe(h));
+const choices=[...document.querySelectorAll('[data-project]')];
+function step(index){const button=choices[(index+choices.length)%choices.length];button.click();button.focus()}
+choices.forEach((button,i)=>{button.addEventListener('keydown',event=>{if(['ArrowRight','ArrowLeft'].includes(event.key)){event.preventDefault();step(i+(event.key==='ArrowRight'?1:-1))}});button.addEventListener('click',()=>{if(!document.documentElement.hasAttribute('data-still'))document.querySelector('.feature figure')?.animate([{opacity:.45,transform:'translateX(12px)'},{opacity:1,transform:'none'}],{duration:260})})});
+const panel=document.querySelector('.feature figure');let origin;panel?.addEventListener('touchstart',e=>{origin=e.touches[0].clientX},{passive:true});panel?.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-origin;if(Math.abs(dx)>55)step(choices.findIndex(b=>b.getAttribute('aria-pressed')==='true')+(dx<0?1:-1))});
+document.querySelectorAll('input[type=range]').forEach(input=>{function paint(){const min=Number(input.min||0),max=Number(input.max||100);input.style.setProperty('--level',(input.value-min)/(max-min)*100+'%')}paint();input.addEventListener('input',paint)});
