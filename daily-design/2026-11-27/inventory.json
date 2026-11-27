@@ -1,0 +1,907 @@
+{
+  "index.html": {
+    "title": "enadorry — 気になったものを、つくってみる",
+    "text": "本文へ移動enadorry作品つくることプロフィール考えごと音の庭質問連絡先動きを止める制作路線図 ／ 2026.11.26enadorry制作線音響線記録線つくっているもの今日はロボット。明日はキャラクターかもしれない。気になるところから、のぞいてみてください。01 / ROBOTICS水中ロボット 動かすROBOTICS画面を押すと、モーターが回る。Unityの操作をUDPでESP32に送って、モーターを動かします。画面の中だけで終わらないところが、おもしろい。Unity / ESP32 / UDP詳しく見る ↗02 / INTERACTION触って遊べるもの 触れるINTERACTION押した。そのあとの感じまで。会話の出し方、ゲームパッドの操作、ボタンの反応。Unityでつくりながら、触って気持ちいい感じを探しています。Unity / C# / UI詳しく見る ↗03 / COMPANIONSうちの子たちの庭 出会うCOMPANIONS歩いてる。と思ったら寝てる。Shizuku、Soraと仲間たちが、歩いたり眠ったり。作業のついでに眺めてもいいし、ちょっと構ってみてもいい。Character / Animation / Web詳しく見る ↗04 / LOCAL AI会話するプログラム 考えるLOCAL AI手元のAIと、ちょっと話す。Discordから、Ollamaで動かすAIに話しかけます。同じモデルでも、頼み方で返事が変わる。その違いも試しています。Python / Discord / Ollama詳しく見る ↗05 / SOUNDSCAPE音の庭 聴くSOUNDSCAPE作業の横で、音が流れてる。水の音や、少しずつ変わる音楽を流せます。何かするときの横にでも。静かなほうがいい日は、止めておいてください。Web Audio / Generative詳しく見る ↗06 / JOURNAL考えごとの記録 残すJOURNALまだ、まとまってない話も。つくっている途中のことや、ふと気になったことをnoteに。答えが出た話も、まだ考えている話もあります。Writing / note詳しく見る ↗01H2OROBOTRobotics · Unity / ESP3202InteractionGames · Unity / C#03CompanionsDigital life · Web H2OROBOT画面で操作すると、水の中のロボットが動く。UnityとESP32をつないでいます。作品を見る ↗CONCEPT気になったら、ちょっと触ってみる。画面のボタンを押したら、目の前のモーターが回る。そういう、つながった瞬間がおもしろい。ロボットを動かしたり、AIと話したり、うちの子を歩かせたり。気になって触ってみたものを、ここに並べています。つくったものを見る ↓SOUNDSCAPE音の庭水音の庭音の準備中…流す音水音の庭EVERFLOW音量 20%アクセス時に再生する水音アプリを開く ↗演奏アプリを開く ↗LISTENING最近聴いた曲読み込み中…JOURNAL考えごとの記録記事を読み込み中…記事をもっと読む ↗note / Enadorry ↗PROFILEえなどりですegawa shuuhei2009年3月19日 生まれ。電子工作、プログラミング、3D制作をしています。画面の中も、配線の先も、気になるものはいろいろ。ロボットの配線を考えたり、Unityを触ったり。うまく動くと、やっぱりうれしい。動かないときは、どこで止まっているのか探すところから。また少しずつつくっています。コードを見にいく ↗ArduinoESP32Raspberry PiPythonC / C++C#UnityBlenderINFORMATIONもう少し、えなどりのこと何をつくってるの？＋UnityでゲームやUIをつくったり、ESP32でロボットを動かしたり。Pythonも、キャラクターづくりも触っています。気になるものがいろいろあるので、ここも少しずつ増えるかもしれません。コードものぞける？＋公開しているものは GitHub ↗ に置いています。気になったら、のぞいてみてください。どこから連絡すればいい？＋enadorry@enadorry.dev または Discord ↗ からどうぞ。相互リンクしてもいい？＋ぜひ。サイト名とURLを添えて、こちらのGitHub Issue ↗ で声をかけてください。CONTACT何かあれば、こちらへ。メールenadorry@enadorry.dev↗X@scarlet_shuu↗INSTAGRAM@enadorry.2009↗GITHUBenadorry↗Discord↗相互リンク募集中.自分のサイトがある方、よければ相互リンクしませんか。サイト名とURLを、GitHub Issueで教えてください。相互リンクの話をする ↗© 2026 enadorry訪問数いちばん上へ ↑閉じる ×noteで原文を読む ↗水音の庭音を再生 ▷消音",
+    "links": [
+      {
+        "text": "本文へ移動",
+        "href": "#content"
+      },
+      {
+        "text": "enadorry",
+        "href": "/index.html"
+      },
+      {
+        "text": "作品",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "つくること",
+        "href": "/index.html#concept"
+      },
+      {
+        "text": "プロフィール",
+        "href": "/index.html#about"
+      },
+      {
+        "text": "考えごと",
+        "href": "/index.html#notes"
+      },
+      {
+        "text": "音の庭",
+        "href": "/index.html#soundscape"
+      },
+      {
+        "text": "質問",
+        "href": "/index.html#faq"
+      },
+      {
+        "text": "連絡先",
+        "href": "/index.html#contact"
+      },
+      {
+        "text": "制作線",
+        "href": "#works"
+      },
+      {
+        "text": "音響線",
+        "href": "#soundscape"
+      },
+      {
+        "text": "記録線",
+        "href": "#notes"
+      },
+      {
+        "text": "詳しく見る ↗",
+        "href": "/h2orobot.html"
+      },
+      {
+        "text": "詳しく見る ↗",
+        "href": "/interactive.html"
+      },
+      {
+        "text": "詳しく見る ↗",
+        "href": "/companions.html"
+      },
+      {
+        "text": "詳しく見る ↗",
+        "href": "/local-ai.html"
+      },
+      {
+        "text": "詳しく見る ↗",
+        "href": "#soundscape"
+      },
+      {
+        "text": "詳しく見る ↗",
+        "href": "#notes"
+      },
+      {
+        "text": "作品を見る ↗",
+        "href": "/h2orobot.html"
+      },
+      {
+        "text": "つくったものを見る ↓",
+        "href": "#journey"
+      },
+      {
+        "text": "水音アプリを開く ↗",
+        "href": "/sound-apps/water/index.html"
+      },
+      {
+        "text": "演奏アプリを開く ↗",
+        "href": "/sound-apps/focus/index.html"
+      },
+      {
+        "text": "note / Enadorry ↗",
+        "href": "https://note.com/enadorry"
+      },
+      {
+        "text": "コードを見にいく ↗",
+        "href": "https://github.com/enadorry"
+      },
+      {
+        "text": "GitHub ↗",
+        "href": "https://github.com/enadorry"
+      },
+      {
+        "text": "enadorry@enadorry.dev",
+        "href": "mailto:enadorry@enadorry.dev"
+      },
+      {
+        "text": "Discord ↗",
+        "href": "https://discord.com/users/936835133770711051"
+      },
+      {
+        "text": "こちらのGitHub Issue ↗",
+        "href": "https://github.com/enadorry/enadorrydev.io/issues/1"
+      },
+      {
+        "text": "メールenadorry@enadorry.dev↗",
+        "href": "mailto:enadorry@enadorry.dev"
+      },
+      {
+        "text": "X@scarlet_shuu↗",
+        "href": "https://x.com/scarlet_shuu"
+      },
+      {
+        "text": "INSTAGRAM@enadorry.2009↗",
+        "href": "https://www.instagram.com/enadorry.2009/"
+      },
+      {
+        "text": "GITHUBenadorry↗",
+        "href": "https://github.com/enadorry"
+      },
+      {
+        "text": "Discord↗",
+        "href": "https://discord.com/users/936835133770711051"
+      },
+      {
+        "text": "相互リンクの話をする ↗",
+        "href": "https://github.com/enadorry/enadorrydev.io/issues/1"
+      },
+      {
+        "text": "",
+        "href": "https://count.getloli.com/"
+      },
+      {
+        "text": "いちばん上へ ↑",
+        "href": "#home"
+      },
+      {
+        "text": "水音の庭",
+        "href": "#soundscape"
+      }
+    ],
+    "images": [
+      [
+        "/assets/gallery/h2orobot.svg",
+        "コントローラーと水中ロボットの接続構成図"
+      ],
+      [
+        "/assets/enadorry-icon.jpg",
+        "enadorryのアイコン：白黒の猫"
+      ],
+      [
+        null,
+        "Enadorryのアクセスカウンター"
+      ]
+    ],
+    "characters": [
+      "paradox",
+      "myu",
+      "handa",
+      "synth",
+      "marble",
+      "noise",
+      "error",
+      "mint-radio",
+      "oto",
+      "minto",
+      "shizuku-cyber",
+      "shizuku",
+      "ribbon",
+      "lilia",
+      "sora",
+      "chloe",
+      "note",
+      "yozora",
+      "mashiro",
+      "chrono",
+      "mobius",
+      "mimi",
+      "yume",
+      "stella",
+      "veil"
+    ],
+    "scripts": [
+      "/favicon.js",
+      "/moe-counter.js",
+      "/notes.js",
+      "/social-settings.js",
+      "/spotify.js",
+      "/focus-engine.js",
+      "/ambience.js",
+      "/pixel-companions.js",
+      "/linear-showcase.js",
+      "/transit.js"
+    ],
+    "counter": [
+      "https://count.getloli.com/@Enadorry?theme=kasuterura-4&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto"
+    ]
+  },
+  "h2orobot.html": {
+    "title": "H2OROBOT — enadorry",
+    "text": "本文へ移動enadorry作品つくることプロフィール考えごと音の庭質問連絡先動きを止める← UnityでつくったものH2OROBOTそのスマホで、水の中まで。仕組みが見えるように、READMEをもとに描いた図です。アプリの実際の画面とは異なります。スマホのボタンを押したら、水の中のロボットが動く。そんな操作をするためにつくったのがH2OROBOTです。Unity製のAndroidアプリと、ESP32側のプログラムを公開しています。画面をタップしてもいいし、DualSenseなどのコントローラーをスマホにつないでも大丈夫。操作をWi-Fi／UDPでESP32に送り、移動やアーム、かごを動かします。TOOLS / PLATFORMUnity / Android / ESP32 / Wi-Fi / UDPVERIFIED ENVIRONMENTAndroid 13以降・配布されたESP32 Dev BoardREADMEに記載された動作確認環境LICENSEMIT LicenseREADME UPDATED2026.10.01GitHub / ソースコード ↗最新APKを探す ↗操作は、やりやすいほうで。スマホの画面からロボットを操作できますDualSenseなどのゲームコントローラーも使えますスティックやボタンで、移動・アーム・かごを操作しますAndroidアプリとESP32側のプログラムを公開していますDualSenseなら、こんな操作入力動作左スティック・十字キー前後左右の移動R1 / R2アームを上げる / 下げる△ / ×かごを上げる / 下げる右スティック十字キーの上・下を押しているときに方角を調整まずWi-Fi。それからアプリ。ESP32側のSSIDとパスワードを、自分の環境に合わせて設定して書き込みます。スマホを、ESP32が出しているWi-Fiにつなぎます。つながったらアプリを起動。画面かコントローラーから操作します。先にアプリを開いてしまったら、Wi-Fiにつないだあとで一度終了して、開き直してください。反応がないときは、モバイル通信をOFFにして接続を確かめる方法もREADMEにあります。つなぎ方をREADMEで見る ↗自分の環境で動かしてみるなら。Unityに H2Ov1.1.unitypackage を読み込んで、Android向けのAPKをビルドします。READMEの推奨バージョンは 6000.3.7f1。画面は横向きで使うので、縦向き・縦向き（逆）の自動回転を無効にしてください。ESP32には kibann.ino.ino をArduino IDEなどから書き込みます。iOS向けは、Android版ほど手順や配布環境が整っていません。使う前にREADMEを確かめてください。MIT Licenseで公開しています。人に危害を与える目的や、戦争のためには使わないでほしいです。詳しい利用条件と問い合わせ先は、READMEを確認してください。ビルドの手順を見る ↗UnityのページへUnityでの制作←© 2026 enadorry次は、何をつくろうかな。訪問数いちばん上へ ↑",
+    "links": [
+      {
+        "text": "本文へ移動",
+        "href": "#content"
+      },
+      {
+        "text": "enadorry",
+        "href": "/index.html"
+      },
+      {
+        "text": "作品",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "つくること",
+        "href": "/index.html#concept"
+      },
+      {
+        "text": "プロフィール",
+        "href": "/index.html#about"
+      },
+      {
+        "text": "考えごと",
+        "href": "/index.html#notes"
+      },
+      {
+        "text": "音の庭",
+        "href": "/index.html#soundscape"
+      },
+      {
+        "text": "質問",
+        "href": "/index.html#faq"
+      },
+      {
+        "text": "連絡先",
+        "href": "/index.html#contact"
+      },
+      {
+        "text": "← Unityでつくったもの",
+        "href": "/interactive.html"
+      },
+      {
+        "text": "GitHub / ソースコード ↗",
+        "href": "https://github.com/enadorry/H2OROBOT"
+      },
+      {
+        "text": "最新APKを探す ↗",
+        "href": "https://github.com/enadorry/H2OROBOT/releases/latest"
+      },
+      {
+        "text": "つなぎ方をREADMEで見る ↗",
+        "href": "https://github.com/enadorry/H2OROBOT#使用方法"
+      },
+      {
+        "text": "ビルドの手順を見る ↗",
+        "href": "https://github.com/enadorry/H2OROBOT#ビルド方法"
+      },
+      {
+        "text": "UnityのページへUnityでの制作←",
+        "href": "/interactive.html"
+      },
+      {
+        "text": "",
+        "href": "https://count.getloli.com/"
+      },
+      {
+        "text": "いちばん上へ ↑",
+        "href": "#home"
+      }
+    ],
+    "images": [
+      [
+        "/assets/gallery/h2orobot.svg",
+        "スマートフォンの操作データをWi-Fi・UDPでESP32へ送り、水中ロボットの移動・アーム・かごを制御する構成図"
+      ],
+      [
+        null,
+        "Enadorryのアクセスカウンター"
+      ]
+    ],
+    "characters": [
+      "paradox",
+      "myu",
+      "handa",
+      "synth",
+      "marble",
+      "noise",
+      "error",
+      "mint-radio",
+      "oto",
+      "minto",
+      "shizuku-cyber",
+      "shizuku",
+      "ribbon",
+      "lilia",
+      "sora",
+      "chloe",
+      "note",
+      "yozora",
+      "mashiro",
+      "chrono",
+      "mobius",
+      "mimi",
+      "yume",
+      "stella",
+      "veil"
+    ],
+    "scripts": [
+      "/favicon.js",
+      "/pixel-companions.js",
+      "/moe-counter.js",
+      "/transit.js"
+    ],
+    "counter": [
+      "https://count.getloli.com/@Enadorry?theme=kasuterura-4&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto"
+    ]
+  },
+  "interactive.html": {
+    "title": "Unityでの制作 — enadorry",
+    "text": "本文へ移動enadorry作品つくることプロフィール考えごと音の庭質問連絡先動きを止める← All worksUnityでの制作押したあとの反応まで、つくりたい。ゲーム画面は未掲載です。入力と動きを表すオリジナルのコンセプト図を展示しています。文字が出る速さや、ボタンを押したあとの反応。少し変えるだけで、触った感じが変わるのがおもしろい。Unityで会話演出やゲームパッド入力、UIをつくりながら、その感じを確かめています。YEAR制作年未登録TOOLS / MEDIUMUnity / C# / BlenderGitHub ↗FEATURED PROJECTH2OROBOTスマホで、水中ロボットを動かす。UnityでつくったAndroidアプリから、ESP32へ操作を送ります。画面をタップしても、DualSenseなどのコントローラーを使っても。移動・アーム・かごを操作できます。View project ↗次の作品ローカルLLM会話Bot→© 2026 enadorry次は、何をつくろうかな。訪問数いちばん上へ ↑",
+    "links": [
+      {
+        "text": "本文へ移動",
+        "href": "#content"
+      },
+      {
+        "text": "enadorry",
+        "href": "/index.html"
+      },
+      {
+        "text": "作品",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "つくること",
+        "href": "/index.html#concept"
+      },
+      {
+        "text": "プロフィール",
+        "href": "/index.html#about"
+      },
+      {
+        "text": "考えごと",
+        "href": "/index.html#notes"
+      },
+      {
+        "text": "音の庭",
+        "href": "/index.html#soundscape"
+      },
+      {
+        "text": "質問",
+        "href": "/index.html#faq"
+      },
+      {
+        "text": "連絡先",
+        "href": "/index.html#contact"
+      },
+      {
+        "text": "← All works",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "GitHub ↗",
+        "href": "https://github.com/enadorry"
+      },
+      {
+        "text": "H2OROBOTスマホで、水中ロボットを動かす。UnityでつくったAndroidアプリから、ESP32へ操作を送ります。画面をタップしても、DualSenseなどのコントローラーを使っても。移動・アーム・かごを操作できます。View project ↗",
+        "href": "/h2orobot.html"
+      },
+      {
+        "text": "次の作品ローカルLLM会話Bot→",
+        "href": "/local-ai.html"
+      },
+      {
+        "text": "",
+        "href": "https://count.getloli.com/"
+      },
+      {
+        "text": "いちばん上へ ↑",
+        "href": "#home"
+      }
+    ],
+    "images": [
+      [
+        "/assets/gallery/orbit.svg",
+        "暗い空間に浮かぶ赤い軌道とインタラクションの座標"
+      ],
+      [
+        "/assets/gallery/h2orobot.svg",
+        "スマートフォンからWi-FiとUDPでESP32へ信号を送り、水中ロボットを制御する構成図"
+      ],
+      [
+        null,
+        "Enadorryのアクセスカウンター"
+      ]
+    ],
+    "characters": [
+      "paradox",
+      "myu",
+      "handa",
+      "synth",
+      "marble",
+      "noise",
+      "error",
+      "mint-radio",
+      "oto",
+      "minto",
+      "shizuku-cyber",
+      "shizuku",
+      "ribbon",
+      "lilia",
+      "sora",
+      "chloe",
+      "note",
+      "yozora",
+      "mashiro",
+      "chrono",
+      "mobius",
+      "mimi",
+      "yume",
+      "stella",
+      "veil"
+    ],
+    "scripts": [
+      "/favicon.js",
+      "/pixel-companions.js",
+      "/moe-counter.js",
+      "/transit.js"
+    ],
+    "counter": [
+      "https://count.getloli.com/@Enadorry?theme=kasuterura-4&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto"
+    ]
+  },
+  "companions.html": {
+    "title": "Companions — enadorry",
+    "text": "本文へ移動enadorry作品つくることプロフィール考えごと音の庭質問連絡先動きを止める← All worksCompanions作業の横に、うちの子たち。 SHIZUKU / COMPANION SHIZUKU / COMPANION気になる子をクリックすると、ちょっと反応してくれます。別の子・画風に切り替える ↗カーソルのShizukuを表示 / 非表示歩いている子もいれば、もう寝ている子も。つまんでドラッグすると移動できます。クリックで動きを選ぶと、その動きを繰り返します。おまかせに戻したいときは「自由に遊ばせる」をどうぞ。吹き出しは約2.4秒で消えます。COLLECTION / TWENTY-FIVE COMPANIONSTHE LITTLE GARDENうちの子の庭.特に何かしなくても大丈夫。歩いたり眠ったりするところを、のんびり眺める庭です。25 CHARACTERS / NO DUPLICATESLOCAL TIMEz z zクロエz z zノートz z zパラドクスz z zみゅうz z zはんだz z zシンセz z zマーブルz z zノイズz z zエラーz z zミントz z zOtoz z zMintoz z zShizukuz z zAzurez z zリボンz z zLiliaz z zSoraz z zよぞらz z zましろz z zクロノz z zメビウスz z zミミz z zユメz z zステラz z zヴェイルENADORRY'S LITTLE GARDEN端末の時刻に合わせて過ごしています。ドラッグで移動、クリックで動きを選べます。キーボードなら、ペットにフォーカスして矢印キーで移動できます。自由に遊ばせる ↗動きを止める庭のペットを表示するにはJavaScriptを有効にしてください。Shizuku、Soraと、全部で25種類の仲間たち。画面の隅でちょこちょこ動いていると、なんだか気になる。そんな子たちを、ひとつの庭に集めました。YEAR制作年未登録TOOLS / MEDIUMCharacter / Animation / WebGitHub ↗次の作品Unityでのゲーム制作→© 2026 enadorry次は、何をつくろうかな。訪問数いちばん上へ ↑シズク",
+    "links": [
+      {
+        "text": "本文へ移動",
+        "href": "#content"
+      },
+      {
+        "text": "enadorry",
+        "href": "/index.html"
+      },
+      {
+        "text": "作品",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "つくること",
+        "href": "/index.html#concept"
+      },
+      {
+        "text": "プロフィール",
+        "href": "/index.html#about"
+      },
+      {
+        "text": "考えごと",
+        "href": "/index.html#notes"
+      },
+      {
+        "text": "音の庭",
+        "href": "/index.html#soundscape"
+      },
+      {
+        "text": "質問",
+        "href": "/index.html#faq"
+      },
+      {
+        "text": "連絡先",
+        "href": "/index.html#contact"
+      },
+      {
+        "text": "← All works",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "GitHub ↗",
+        "href": "https://github.com/enadorry"
+      },
+      {
+        "text": "次の作品Unityでのゲーム制作→",
+        "href": "/interactive.html"
+      },
+      {
+        "text": "",
+        "href": "https://count.getloli.com/"
+      },
+      {
+        "text": "いちばん上へ ↑",
+        "href": "#home"
+      }
+    ],
+    "images": [
+      [
+        "/assets/gallery/shizuku-768.webp",
+        "シズクちゃん"
+      ],
+      [
+        "/assets/gallery/shizuku-blink-768.webp",
+        ""
+      ],
+      [
+        null,
+        "Enadorryのアクセスカウンター"
+      ]
+    ],
+    "characters": [
+      "chloe",
+      "note",
+      "paradox",
+      "myu",
+      "handa",
+      "synth",
+      "marble",
+      "noise",
+      "error",
+      "mint-radio",
+      "oto",
+      "minto",
+      "shizuku-cyber",
+      "shizuku",
+      "ribbon",
+      "lilia",
+      "sora",
+      "yozora",
+      "mashiro",
+      "chrono",
+      "mobius",
+      "mimi",
+      "yume",
+      "stella",
+      "veil",
+      "paradox",
+      "myu",
+      "handa",
+      "synth",
+      "marble",
+      "noise",
+      "error",
+      "mint-radio",
+      "oto",
+      "minto",
+      "shizuku-cyber",
+      "shizuku",
+      "ribbon",
+      "lilia",
+      "sora",
+      "chloe",
+      "note",
+      "yozora",
+      "mashiro",
+      "chrono",
+      "mobius",
+      "mimi",
+      "yume",
+      "stella",
+      "veil"
+    ],
+    "scripts": [
+      "/random-companion.js",
+      "/room.js",
+      "/garden.js",
+      "/favicon.js",
+      "/pixel-companions.js",
+      "/moe-counter.js",
+      "/transit.js"
+    ],
+    "counter": [
+      "https://count.getloli.com/@Enadorry?theme=kasuterura-4&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto"
+    ]
+  },
+  "local-ai.html": {
+    "title": "ローカルLLM会話Bot — enadorry",
+    "text": "本文へ移動enadorry作品つくることプロフィール考えごと音の庭質問連絡先動きを止める← All worksローカルLLM会話Bot手元のAI、今日はどう返すかな。実際の会話ログではなく、メッセージの往復を表すオリジナルのコンセプト図です。Discordで話しかけると、Ollamaで動かしているAIが返事をするBotです。頼み方や性格の設定を変えると、返し方もちょっと変わる。どんな会話になるのか、調整しながら試しています。YEAR制作年未登録TOOLS / MEDIUMPython / Discord / OllamaGitHub ↗次の作品水中ロボット制御→© 2026 enadorry次は、何をつくろうかな。訪問数いちばん上へ ↑",
+    "links": [
+      {
+        "text": "本文へ移動",
+        "href": "#content"
+      },
+      {
+        "text": "enadorry",
+        "href": "/index.html"
+      },
+      {
+        "text": "作品",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "つくること",
+        "href": "/index.html#concept"
+      },
+      {
+        "text": "プロフィール",
+        "href": "/index.html#about"
+      },
+      {
+        "text": "考えごと",
+        "href": "/index.html#notes"
+      },
+      {
+        "text": "音の庭",
+        "href": "/index.html#soundscape"
+      },
+      {
+        "text": "質問",
+        "href": "/index.html#faq"
+      },
+      {
+        "text": "連絡先",
+        "href": "/index.html#contact"
+      },
+      {
+        "text": "← All works",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "GitHub ↗",
+        "href": "https://github.com/enadorry"
+      },
+      {
+        "text": "次の作品水中ロボット制御→",
+        "href": "/underwater.html"
+      },
+      {
+        "text": "",
+        "href": "https://count.getloli.com/"
+      },
+      {
+        "text": "いちばん上へ ↑",
+        "href": "#home"
+      }
+    ],
+    "images": [
+      [
+        "/assets/gallery/dialogue.svg",
+        "言葉が細い白い信号となって往復する会話Botのコンセプト図"
+      ],
+      [
+        null,
+        "Enadorryのアクセスカウンター"
+      ]
+    ],
+    "characters": [
+      "paradox",
+      "myu",
+      "handa",
+      "synth",
+      "marble",
+      "noise",
+      "error",
+      "mint-radio",
+      "oto",
+      "minto",
+      "shizuku-cyber",
+      "shizuku",
+      "ribbon",
+      "lilia",
+      "sora",
+      "chloe",
+      "note",
+      "yozora",
+      "mashiro",
+      "chrono",
+      "mobius",
+      "mimi",
+      "yume",
+      "stella",
+      "veil"
+    ],
+    "scripts": [
+      "/favicon.js",
+      "/pixel-companions.js",
+      "/moe-counter.js",
+      "/transit.js"
+    ],
+    "counter": [
+      "https://count.getloli.com/@Enadorry?theme=kasuterura-4&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto"
+    ]
+  },
+  "underwater.html": {
+    "title": "水中ロボット制御 — enadorry",
+    "text": "本文へ移動enadorry作品つくることプロフィール考えごと音の庭質問連絡先動きを止める← All works水中ロボット制御コントローラーの先に、水中ロボット。実機写真は未掲載です。通信と制御を表すオリジナルのコンセプト図を展示しています。PCでコントローラーを動かすと、その操作がUDPでESP32に届いて、モーターが回ります。通信も電源も、画面の中だけでは済まない。実機で確かめながら組み上げた水中ロボットです。YEAR制作年未登録TOOLS / MEDIUMESP32 / Unity / C# / UDPGitHub ↗次の作品Companions→© 2026 enadorry次は、何をつくろうかな。訪問数いちばん上へ ↑",
+    "links": [
+      {
+        "text": "本文へ移動",
+        "href": "#content"
+      },
+      {
+        "text": "enadorry",
+        "href": "/index.html"
+      },
+      {
+        "text": "作品",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "つくること",
+        "href": "/index.html#concept"
+      },
+      {
+        "text": "プロフィール",
+        "href": "/index.html#about"
+      },
+      {
+        "text": "考えごと",
+        "href": "/index.html#notes"
+      },
+      {
+        "text": "音の庭",
+        "href": "/index.html#soundscape"
+      },
+      {
+        "text": "質問",
+        "href": "/index.html#faq"
+      },
+      {
+        "text": "連絡先",
+        "href": "/index.html#contact"
+      },
+      {
+        "text": "← All works",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "GitHub ↗",
+        "href": "https://github.com/enadorry"
+      },
+      {
+        "text": "次の作品Companions→",
+        "href": "/companions.html"
+      },
+      {
+        "text": "",
+        "href": "https://count.getloli.com/"
+      },
+      {
+        "text": "いちばん上へ ↑",
+        "href": "#home"
+      }
+    ],
+    "images": [
+      [
+        "/assets/gallery/signal.svg",
+        "水中ロボットの通信経路を青い信号線で描いたコンセプト図"
+      ],
+      [
+        null,
+        "Enadorryのアクセスカウンター"
+      ]
+    ],
+    "characters": [
+      "paradox",
+      "myu",
+      "handa",
+      "synth",
+      "marble",
+      "noise",
+      "error",
+      "mint-radio",
+      "oto",
+      "minto",
+      "shizuku-cyber",
+      "shizuku",
+      "ribbon",
+      "lilia",
+      "sora",
+      "chloe",
+      "note",
+      "yozora",
+      "mashiro",
+      "chrono",
+      "mobius",
+      "mimi",
+      "yume",
+      "stella",
+      "veil"
+    ],
+    "scripts": [
+      "/favicon.js",
+      "/pixel-companions.js",
+      "/moe-counter.js",
+      "/transit.js"
+    ],
+    "counter": [
+      "https://count.getloli.com/@Enadorry?theme=kasuterura-4&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto"
+    ]
+  },
+  "sound-apps/water/index.html": {
+    "title": "水音の庭 — 水の音でも流そうかな。",
+    "text": "enadorry作品つくることプロフィール考えごと音の庭質問連絡先動きを止めるMIZU NO NIWASOUND SANCTUARY水音の庭 / GENERATIVE SOUNDSCAPE水の音でも、流そうかな。水滴が落ちたり、風鈴が鳴ったり。少しずつ変わる音を、作業の横に置いてみる。● 静寂のなかで00:00:00▶ 音を流してみる↻水滴と氷のきらめきFLOWING, NEVER REPEATINGYOUR SOUNDSCAPE今日は、どの音にしよう。01 水滴の庭02 渓流03 雨の庭04 波打ち際水の音 WATER70%ガラス風鈴 GLASS CHIMES55%氷のきらめき ICE CLINKS40%景色の変化 EVOLUTIONゆっくり全体の音量 VOLUME60%∞ 音色をリアルタイムに生成おやすみタイマー 無制限15分30分60分120分再生すると、水や風鈴の音をその場でつくります。同じ録音を繰り返すのではなく、音色や間隔、響きが少しずつ変わっていきます。流しておきたい間は、このページを開いたままにしておいてください。MIZU NO NIWA",
+    "links": [
+      {
+        "text": "enadorry",
+        "href": "/index.html"
+      },
+      {
+        "text": "作品",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "つくること",
+        "href": "/index.html#concept"
+      },
+      {
+        "text": "プロフィール",
+        "href": "/index.html#about"
+      },
+      {
+        "text": "考えごと",
+        "href": "/index.html#notes"
+      },
+      {
+        "text": "音の庭",
+        "href": "/index.html#soundscape"
+      },
+      {
+        "text": "質問",
+        "href": "/index.html#faq"
+      },
+      {
+        "text": "連絡先",
+        "href": "/index.html#contact"
+      },
+      {
+        "text": "MIZU NO NIWA",
+        "href": "./"
+      }
+    ],
+    "images": [],
+    "characters": [],
+    "scripts": [
+      "/transit.js",
+      "app.js"
+    ],
+    "counter": []
+  },
+  "sound-apps/focus/index.html": {
+    "title": "EVERFLOW | 終わらない音楽",
+    "text": "enadorry作品つくることプロフィール考えごと音の庭質問連絡先動きを止めるEVERFLOWGENERATIVE RADIOENADORRY / 01 A SESSION WITHOUT AN END次は、どんな音かな。鍵盤や電子音が、少しずつ違うフレーズを奏でます。作業のおともにでも。気になったら、音の設定も触ってみてください。▶演奏をはじめる↻READY · 再生すると音が流れます音量55% FLOATING / 漂う00:00Dm9待機中∞ LIVE COMPOSITION 音をちょっと変えてみる設定を変えると、次のフレーズから少しずつ音が変わります。4拍ごとに全ランダムCHAOS4拍ごとに音程、コード、音色、リズム、楽器、テンポ、音数、残響、定位が変わります。次に何が来るかはおまかせ。音量は固定で、オフにすると元の設定に戻ります。01漂うAMBIENT JAZZ02揺れるELECTRONIC GROOVE03夢を見るNOCTURNAL KEYSテンポ 88 BPMゆったり 軽やか音数 45%余白 賑わい残響 60%近く 遠く鍵盤電子音ベースドラム ORIGINAL INSTRUMENTAL · PROCEDURAL SYNTHESISどこから音が来てるの？音楽理論と確率を使って、その場で曲をつくっています。既存の音源を流したり、複製したりする仕組みではありません。歌声や歌詞も入りません。タブを閉じると演奏は止まります。スマホの画面を消したときや、別のアプリに移ったときも、ブラウザによって止まることがあります。つくるきっかけになったプレイリスト",
+    "links": [
+      {
+        "text": "enadorry",
+        "href": "/index.html"
+      },
+      {
+        "text": "作品",
+        "href": "/index.html#works"
+      },
+      {
+        "text": "つくること",
+        "href": "/index.html#concept"
+      },
+      {
+        "text": "プロフィール",
+        "href": "/index.html#about"
+      },
+      {
+        "text": "考えごと",
+        "href": "/index.html#notes"
+      },
+      {
+        "text": "音の庭",
+        "href": "/index.html#soundscape"
+      },
+      {
+        "text": "質問",
+        "href": "/index.html#faq"
+      },
+      {
+        "text": "連絡先",
+        "href": "/index.html#contact"
+      },
+      {
+        "text": "EVERFLOWGENERATIVE RADIO",
+        "href": "./"
+      },
+      {
+        "text": "つくるきっかけになったプレイリスト",
+        "href": "https://soundcloud.com/ochyai/sets/nulldendria-feat-yoichi-ochiai-at-jazz-festival-takayama-2025"
+      }
+    ],
+    "images": [],
+    "characters": [],
+    "scripts": [
+      "/transit.js",
+      "app.js?v=3"
+    ],
+    "counter": []
+  },
+  "counterLogic": "(()=>{\n const themes=['kasuterura-4','booru-jaypee','booru-touhoulat'];\n // Assign just one URL, so theme selection does not issue two counting requests.\n const theme=themes[Math.floor(Math.random()*themes.length)];\n document.querySelectorAll('.moe-counter-image[data-counter-src]').forEach(image=>{\n  const url=new URL(image.dataset.counterSrc);url.searchParams.set('theme',theme);image.src=url.href;\n  image.addEventListener('error',()=>{image.alt='アクセスカウンターを読み込めませんでした';},{once:true});\n });\n})();\n"
+}
