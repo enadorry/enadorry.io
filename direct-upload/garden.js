@@ -52,7 +52,8 @@
 
   const images = new Map();
   let width = 1, height = 1, petSize = 70;
-  let visible = false, paused = reduced.matches, raf = 0, previousTime = 0, clock = 0;
+  let visible = false, paused = false, raf = 0, previousTime = 0, clock = 0;
+  const sitePaused = () => document.documentElement.hasAttribute('data-still') || reduced.matches;
   const random = (a,b) => a + Math.random() * (b-a);
   // Feet stay within the lawn; the pond is an obstacle, not a walkable area.
   function inLawn(x,y) {
@@ -160,7 +161,7 @@
     }
     place(pet);paint(pet);
   }
-  function running() {return visible && !document.hidden && !paused && !reduced.matches;}
+  function running() {return visible && !document.hidden && !paused && !sitePaused();}
   function tick(now) {
     raf=0;
     if(!running()) {previousTime=0;return;}
@@ -180,10 +181,9 @@
     if(!running() && raf) {cancelAnimationFrame(raf);raf=0;previousTime=0;}
   }
   function syncPause() {
-    pauseButton.setAttribute('aria-pressed',String(paused||reduced.matches));
-    pauseButton.textContent=(paused||reduced.matches)?'動きを再開する':'動きを止める';
-    if(reduced.matches) pauseButton.textContent='動きを減らす設定を使用中';
-    pauseButton.disabled=reduced.matches;
+    pauseButton.setAttribute('aria-pressed',String(paused || sitePaused()));
+    pauseButton.textContent=sitePaused()?'サイトの設定で停止中':paused?'庭の動きを再開':'庭の動きを止める';
+    pauseButton.disabled=sitePaused();
   }
   function layout() {
     width=garden.clientWidth; height=garden.clientHeight;
@@ -299,5 +299,6 @@
   // Minute updates use wall-clock time; animation stays on the existing visible-only scheduler.
   setInterval(()=>{if(!document.hidden){refreshTime();start();}},60000);
   reduced.addEventListener('change',()=>{syncPause();pets.forEach(paint);start();});
+  window.addEventListener('enadorry-motion',()=>{syncPause();start();});
   syncPause();
 })();

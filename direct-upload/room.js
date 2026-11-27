@@ -22,19 +22,22 @@
     clearTimeout(reactionTimer);
     reactionTimer = setTimeout(() => heroButton.classList.remove('is-reacting'), 1900);
   });
+  const paused = () => reduceMotion.matches || document.documentElement.hasAttribute('data-still');
+  let blinkTimer;
   function blink() {
+    if (paused()) return;
     heroButton.classList.add('is-blinking');
-    setTimeout(() => {
+    blinkTimer = setTimeout(() => {
       heroButton.classList.remove('is-blinking');
-      setTimeout(blink, 2600 + Math.random() * 2700);
+      blinkTimer = setTimeout(blink, 2600 + Math.random() * 2700);
     }, 150);
   }
-  if (!reduceMotion.matches) setTimeout(blink, 1700);
+  if (!paused()) blinkTimer = setTimeout(blink, 1700);
   function placeDock() { if (coarse.matches) { targetX = window.innerWidth - 100; targetY = window.innerHeight - 115; } }
   placeDock();
   window.addEventListener('resize', placeDock);
   window.addEventListener('pointermove', e => {
-    if (e.pointerType === 'touch') return;
+    if (e.pointerType === 'touch' || paused()) return;
     targetX = Math.max(0, Math.min(window.innerWidth - 90, e.clientX + 17));
     targetY = Math.max(0, Math.min(window.innerHeight - 105, e.clientY + 14));
     if (Math.abs(targetX - lastX) > 3) facing = targetX < lastX ? -1 : 1;
@@ -44,12 +47,17 @@
   function animate(now) {
     cursorRaf = 0;
     if (pet.hidden || document.hidden) return;
+    if (paused()) {
+      x = window.innerWidth - 105;
+      y = window.innerHeight - 125;
+      targetX = x; targetY = y;
+    }
     const moving = !coarse.matches && !reduceMotion.matches && now < moveUntil;
     const ease = reduceMotion.matches ? 1 : .13;
     x += (targetX - x) * ease; y += (targetY - y) * ease;
     pet.style.transform = `translate3d(${x}px,${y}px,0)`;
     if (sheet.complete && sheet.naturalWidth) {
-      if (now - lastFrame > (moving ? 85 : 240)) { frame++; lastFrame = now; }
+      if (!paused() && now - lastFrame > (moving ? 85 : 240)) { frame++; lastFrame = now; }
       ctx.clearRect(0,0,192,208);
       // The ChatGPT pet sprite sheet uses 192×208 cells (8 columns, 11 rows).
       const row = moving ? (facing < 0 ? 2 : 1) : 0;
@@ -57,11 +65,18 @@
       const sw=sheet.naturalWidth/8, sh=sheet.naturalHeight/11;
       ctx.drawImage(sheet,(frame % count)*sw,row*sh,sw,sh,0,0,192,208);
     }
-    cursorRaf = requestAnimationFrame(animate);
+    if (!paused()) cursorRaf = requestAnimationFrame(animate);
   }
   // The room keeps the cursor companion opt-in to preserve a quiet viewing space.
   const toggle = document.getElementById('companion-toggle');
   const startCursor = () => { if (!pet.hidden && !document.hidden && !cursorRaf) cursorRaf = requestAnimationFrame(animate); };
+  sheet.addEventListener('load',startCursor);
+  window.addEventListener('enadorry-motion', () => {
+    clearTimeout(blinkTimer);
+    heroButton.classList.remove('is-blinking');
+    if (!paused()) blinkTimer = setTimeout(blink,1700);
+    startCursor();
+  });
   if (toggle) toggle.addEventListener('click', () => {
     pet.hidden = !pet.hidden;
     toggle.setAttribute('aria-pressed', String(!pet.hidden));

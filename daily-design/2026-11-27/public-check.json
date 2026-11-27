@@ -1,0 +1,509 @@
+{
+  "production": "5ccb520af3dd899f2cb715481917f2fec6f4fe22",
+  "rawHtmlComparedIgnoringLineEndings": {
+    "/": {
+      "http": 200,
+      "matches": true
+    },
+    "/h2orobot.html": {
+      "http": 200,
+      "matches": true
+    },
+    "/interactive.html": {
+      "http": 200,
+      "matches": true
+    },
+    "/companions.html": {
+      "http": 200,
+      "matches": true
+    },
+    "/local-ai.html": {
+      "http": 200,
+      "matches": true
+    },
+    "/sound-apps/water/index.html": {
+      "http": 200,
+      "matches": true
+    },
+    "/sound-apps/focus/index.html": {
+      "http": 200,
+      "matches": true
+    },
+    "/underwater.html": {
+      "http": 200,
+      "matches": true
+    },
+    "/sound-apps/water/": {
+      "http": 200,
+      "matches": true
+    },
+    "/sound-apps/focus/": {
+      "http": 200,
+      "matches": true
+    }
+  },
+  "pages": {
+    "/": {
+      "headings": [
+        "enadorry",
+        "つくっているもの",
+        "H2OROBOT",
+        "気になったら、ちょっと触ってみる。",
+        "音の庭",
+        "水音の庭",
+        "最近聴いた曲",
+        "考えごとの記録",
+        "えなどりです",
+        "egawa shuuhei",
+        "もう少し、えなどりのこと",
+        "何かあれば、こちらへ。",
+        "相互リンク募集中.",
+        ""
+      ],
+      "figures": [
+        {
+          "caption": "H2OROBOT 画面で操作すると、水の中のロボットが動く。UnityとESP32をつないでいます。 作品を見る ↗",
+          "images": [
+            [
+              "/assets/gallery/h2orobot.svg",
+              "コントローラーと水中ロボットの接続構成図"
+            ]
+          ]
+        }
+      ],
+      "controls": [
+        [
+          "motion",
+          "動きを止める"
+        ],
+        [
+          "",
+          "01H2OROBOTRobotics · Unity / ESP32"
+        ],
+        [
+          "",
+          "02InteractionGames · Unity / C#"
+        ],
+        [
+          "",
+          "03CompanionsDigital life · Web"
+        ],
+        [
+          "sound-mode",
+          "水音の庭EVERFLOW"
+        ],
+        [
+          "sound-volume",
+          "環境音の音量"
+        ],
+        [
+          "sound-auto",
+          ""
+        ],
+        [
+          "note-more",
+          "記事をもっと読む ↗"
+        ],
+        [
+          "note-reader-close",
+          "閉じる ×"
+        ],
+        [
+          "sound-play",
+          "音を再生 ▷"
+        ],
+        [
+          "sound-mute",
+          "環境音をミュート"
+        ]
+      ]
+    },
+    "/h2orobot.html": {
+      "headings": [
+        "H2OROBOT",
+        "操作は、やりやすいほうで。",
+        "DualSenseなら、こんな操作",
+        "まずWi-Fi。それからアプリ。",
+        "自分の環境で動かしてみるなら。"
+      ],
+      "figures": [
+        {
+          "caption": "仕組みが見えるように、READMEをもとに描いた図です。アプリの実際の画面とは異なります。",
+          "images": [
+            [
+              "/assets/gallery/h2orobot.svg",
+              "スマートフォンの操作データをWi-Fi・UDPでESP32へ送り、水中ロボットの移動・アーム・かごを制御する構成図"
+            ]
+          ]
+        }
+      ],
+      "controls": [
+        [
+          "motion",
+          "動きを止める"
+        ]
+      ]
+    },
+    "/interactive.html": {
+      "headings": [
+        "Unityでの制作",
+        "H2OROBOT"
+      ],
+      "figures": [
+        {
+          "caption": "ゲーム画面は未掲載です。入力と動きを表すオリジナルのコンセプト図を展示しています。",
+          "images": [
+            [
+              "/assets/gallery/orbit.svg",
+              "暗い空間に浮かぶ赤い軌道とインタラクションの座標"
+            ]
+          ]
+        },
+        {
+          "caption": "",
+          "images": [
+            [
+              "/assets/gallery/h2orobot.svg",
+              "スマートフォンからWi-FiとUDPでESP32へ信号を送り、水中ロボットを制御する構成図"
+            ]
+          ]
+        }
+      ],
+      "controls": [
+        [
+          "motion",
+          "動きを止める"
+        ]
+      ]
+    },
+    "/companions.html": {
+      "headings": [
+        "Companions",
+        "うちの子の庭."
+      ],
+      "figures": [],
+      "controls": [
+        [
+          "motion",
+          "動きを止める"
+        ],
+        [
+          "hero-interact",
+          "シズクちゃんに話しかける"
+        ],
+        [
+          "companion-shuffle",
+          "別の子・画風に切り替える ↗"
+        ],
+        [
+          "companion-toggle",
+          "カーソルのShizukuを表示 / 非表示"
+        ],
+        [
+          "",
+          "クロエに話しかける"
+        ],
+        [
+          "",
+          "ノートに話しかける"
+        ],
+        [
+          "",
+          "パラドクスに話しかける"
+        ],
+        [
+          "",
+          "みゅうに話しかける"
+        ],
+        [
+          "",
+          "はんだに話しかける"
+        ],
+        [
+          "",
+          "シンセに話しかける"
+        ],
+        [
+          "",
+          "マーブルに話しかける"
+        ],
+        [
+          "",
+          "ノイズに話しかける"
+        ],
+        [
+          "",
+          "エラーに話しかける"
+        ],
+        [
+          "",
+          "ミントに話しかける"
+        ],
+        [
+          "",
+          "Otoに話しかける"
+        ],
+        [
+          "",
+          "Mintoに話しかける"
+        ],
+        [
+          "",
+          "Shizukuに話しかける"
+        ],
+        [
+          "",
+          "Azureに話しかける"
+        ],
+        [
+          "",
+          "リボンに話しかける"
+        ],
+        [
+          "",
+          "Liliaに話しかける"
+        ],
+        [
+          "",
+          "Soraに話しかける"
+        ],
+        [
+          "",
+          "よぞらに話しかける"
+        ],
+        [
+          "",
+          "ましろに話しかける"
+        ],
+        [
+          "",
+          "クロノに話しかける"
+        ],
+        [
+          "",
+          "メビウスに話しかける"
+        ],
+        [
+          "",
+          "ミミに話しかける"
+        ],
+        [
+          "",
+          "ユメに話しかける"
+        ],
+        [
+          "",
+          "ステラに話しかける"
+        ],
+        [
+          "",
+          "ヴェイルに話しかける"
+        ],
+        [
+          "garden-reset",
+          "自由に遊ばせる ↗"
+        ],
+        [
+          "garden-pause",
+          "動きを止める"
+        ]
+      ]
+    },
+    "/local-ai.html": {
+      "headings": [
+        "ローカルLLM会話Bot"
+      ],
+      "figures": [
+        {
+          "caption": "実際の会話ログではなく、メッセージの往復を表すオリジナルのコンセプト図です。",
+          "images": [
+            [
+              "/assets/gallery/dialogue.svg",
+              "言葉が細い白い信号となって往復する会話Botのコンセプト図"
+            ]
+          ]
+        }
+      ],
+      "controls": [
+        [
+          "motion",
+          "動きを止める"
+        ]
+      ]
+    },
+    "/underwater.html": {
+      "headings": [
+        "水中ロボット制御"
+      ],
+      "figures": [
+        {
+          "caption": "実機写真は未掲載です。通信と制御を表すオリジナルのコンセプト図を展示しています。",
+          "images": [
+            [
+              "/assets/gallery/signal.svg",
+              "水中ロボットの通信経路を青い信号線で描いたコンセプト図"
+            ]
+          ]
+        }
+      ],
+      "controls": [
+        [
+          "motion",
+          "動きを止める"
+        ]
+      ]
+    },
+    "/sound-apps/water/index.html": {
+      "headings": [
+        "水の音でも、流そうかな。",
+        "今日は、どの音にしよう。"
+      ],
+      "figures": [],
+      "controls": [
+        [
+          "motion",
+          "動きを止める"
+        ],
+        [
+          "play",
+          "再生"
+        ],
+        [
+          "refresh",
+          "新しい音の景色"
+        ],
+        [
+          "",
+          "01　水滴の庭"
+        ],
+        [
+          "",
+          "02　渓流"
+        ],
+        [
+          "",
+          "03　雨の庭"
+        ],
+        [
+          "",
+          "04　波打ち際"
+        ],
+        [
+          "water",
+          ""
+        ],
+        [
+          "chime",
+          ""
+        ],
+        [
+          "ice",
+          ""
+        ],
+        [
+          "variation",
+          ""
+        ],
+        [
+          "volume",
+          ""
+        ],
+        [
+          "timer",
+          "無制限15分30分60分120分"
+        ]
+      ]
+    },
+    "/sound-apps/focus/index.html": {
+      "headings": [
+        "次は、どんな音かな。",
+        "音をちょっと変えてみる"
+      ],
+      "figures": [],
+      "controls": [
+        [
+          "motion",
+          "動きを止める"
+        ],
+        [
+          "play",
+          "▶演奏をはじめる"
+        ],
+        [
+          "renew",
+          "新しい旋律へ"
+        ],
+        [
+          "volume",
+          ""
+        ],
+        [
+          "chaos",
+          ""
+        ],
+        [
+          "",
+          "01漂うAMBIENT JAZZ"
+        ],
+        [
+          "",
+          "02揺れるELECTRONIC GROOVE"
+        ],
+        [
+          "",
+          "03夢を見るNOCTURNAL KEYS"
+        ],
+        [
+          "tempo",
+          ""
+        ],
+        [
+          "density",
+          ""
+        ],
+        [
+          "space",
+          ""
+        ],
+        [
+          "keys",
+          ""
+        ],
+        [
+          "synth",
+          ""
+        ],
+        [
+          "bass",
+          ""
+        ],
+        [
+          "drums",
+          ""
+        ]
+      ]
+    }
+  },
+  "dynamic": {
+    "notes": {
+      "http": 503,
+      "loading": "記事を読み込み中…",
+      "empty": "公開している記事は、まだありません。",
+      "fallback": "noteへの直接リンクと取得失敗メッセージ",
+      "actions": "6件表示・最大25件への展開・本文表示・原文リンク・閉じると記事にフォーカス復帰"
+    },
+    "music": {
+      "http": 503,
+      "loading": "読み込み中…",
+      "fallback": "同梱のspotify-history.json。空なら空表示、両方失敗時は取得失敗を案内"
+    },
+    "social": {
+      "http": 503,
+      "initial": "X・Instagramは非表示。設定の取得成功時に各Visible値で切替",
+      "liveValues": "取得不能"
+    },
+    "sound": "水音の庭・EVERFLOW、再生と停止、音量、ミュート、自動再生設定。個別アプリの景色・タイマー、プリセット・テンポ・楽器・波形を含む。",
+    "garden": "25種類。6–10時は朝、10–18時は昼、18–22時は夕、ほかは夜。時刻は閲覧者の端末基準。会話・ドラッグ・矢印移動・自由行動復帰・個別停止。",
+    "counter": "トップ・詳細のフッター。ID、テーマ抽選と失敗時の代替文はinventory.jsonのcounterLogicと各ページのcounterに収録。実計数は未確認。"
+  }
+}

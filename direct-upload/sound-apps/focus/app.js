@@ -64,8 +64,45 @@ $('play').onclick=toggle;$('renew').onclick=()=>{renewPending=true;if(!playing){
 for(const key of ['tempo','density','space','volume'])$(key).oninput=e=>update(key,e.target.value);
 for(const key of ['keys','synth','bass','drums'])$(key).onchange=e=>{state[key]=e.target.checked;};
 document.querySelectorAll('[data-preset]').forEach(b=>b.onclick=()=>selectPreset(b.dataset.preset));
-const canvas=$('visual'),c=canvas.getContext('2d'),fft=new Uint8Array(512);const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function draw(ts){requestAnimationFrame(draw);if(ts-lastFrame<1000/(reduced?8:30))return;lastFrame=ts;const rect=canvas.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2),w=rect.width,h=rect.height;if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,w,h);if(analyser)analyser.getByteFrequencyData(fft);const time=playing?elapsed+ctx.currentTime-startTime:elapsed;$('clock').textContent=String(Math.floor(time/60)).padStart(2,'0')+':'+String(Math.floor(time%60)).padStart(2,'0');while(playing&&uiQueue.length&&uiQueue[0].time<=ctx.currentTime){const q=uiQueue.shift();$('chord').textContent=q.name;if(q.chaos){if(!state.chaos||q.epoch!==modeEpoch)continue;const current={...state};Object.assign(state,q.settings);paintSettings();Object.assign(state,current);$('section').textContent=q.section;}else $('section').textContent=q.section+' / '+String(q.bar).padStart(3,'0');}c.strokeStyle='#233332';c.lineWidth=1;for(let x=0;x<w;x+=w/10){c.beginPath();c.moveTo(x,0);c.lineTo(x,h);c.stroke();}for(let y=0;y<h;y+=h/6){c.beginPath();c.moveTo(0,y);c.lineTo(w,y);c.stroke();}const motion=reduced?0:time*.6;for(let line=0;line<6;line++){c.beginPath();c.strokeStyle=line===2?'#cafa74':line===3?'#65ccc1':'#467875';c.globalAlpha=line===2?.95:line===3?.55:.25;for(let x=0;x<=w;x+=3){const audio=playing?fft[Math.floor(x/w*180)]/255:0;const envelope=Math.sin(x/w*Math.PI);const y=h/2+Math.sin(x/w*Math.PI*4+motion+line*.55)*(h*.13+audio*h*.18)*envelope+Math.cos(x/w*9-motion*.7)*h*.08*envelope+(line-2.5)*12;if(x===0)c.moveTo(x,y);else c.lineTo(x,y);}c.stroke();}c.globalAlpha=1;}
-requestAnimationFrame(draw);
+const canvas = $('visual'), c = canvas.getContext('2d'), fft = new Uint8Array(512);
+const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+let frameRequest = 0, statusTimer = 0;
+const stillMode = () => reduced.matches || document.documentElement.hasAttribute('data-still');
+function updateTransport() {
+  const time=playing?elapsed+ctx.currentTime-startTime:elapsed;$('clock').textContent=String(Math.floor(time/60)).padStart(2,'0')+':'+String(Math.floor(time%60)).padStart(2,'0');while(playing&&uiQueue.length&&uiQueue[0].time<=ctx.currentTime){const q=uiQueue.shift();$('chord').textContent=q.name;if(q.chaos){if(!state.chaos||q.epoch!==modeEpoch)continue;const current={...state};Object.assign(state,q.settings);paintSettings();Object.assign(state,current);$('section').textContent=q.section;}else $('section').textContent=q.section+' / '+String(q.bar).padStart(3,'0');}
+  return time;
+}
+function paintWave(still) {
+  const rect = canvas.getBoundingClientRect(), dpr = Math.min(devicePixelRatio || 1, 2);
+  const w = rect.width, h = rect.height, time = updateTransport();
+  if (!w || !h) return;
+  if (canvas.width !== Math.round(w*dpr) || canvas.height !== Math.round(h*dpr)) {
+    canvas.width = Math.round(w*dpr); canvas.height = Math.round(h*dpr);
+  }
+  c.setTransform(dpr,0,0,dpr,0,0); c.clearRect(0,0,w,h);
+  if (analyser && !still) analyser.getByteFrequencyData(fft);
+  c.strokeStyle='#233332';c.lineWidth=1;for(let x=0;x<w;x+=w/10){c.beginPath();c.moveTo(x,0);c.lineTo(x,h);c.stroke();}for(let y=0;y<h;y+=h/6){c.beginPath();c.moveTo(0,y);c.lineTo(w,y);c.stroke();}const motion=still?0:time*.6;for(let line=0;line<6;line++){c.beginPath();c.strokeStyle=line===2?'#cafa74':line===3?'#65ccc1':'#467875';c.globalAlpha=line===2?.95:line===3?.55:.25;for(let x=0;x<=w;x+=3){const audio=playing&&!still?fft[Math.floor(x/w*180)]/255:0;const envelope=Math.sin(x/w*Math.PI);const y=h/2+Math.sin(x/w*Math.PI*4+motion+line*.55)*(h*.13+audio*h*.18)*envelope+Math.cos(x/w*9-motion*.7)*h*.08*envelope+(line-2.5)*12;if(x===0)c.moveTo(x,y);else c.lineTo(x,y);}c.stroke();}c.globalAlpha=1;}
+function draw(ts) {
+  frameRequest = requestAnimationFrame(draw);
+  if (ts-lastFrame < 1000/30) return;
+  lastFrame = ts;
+  paintWave(false);
+}
+function scheduleDisplay() {
+  cancelAnimationFrame(frameRequest);
+  clearInterval(statusTimer);
+  if (document.hidden) return;
+  if (stillMode()) {
+    paintWave(true);
+    statusTimer = setInterval(updateTransport, 500);
+  } else {
+    frameRequest = requestAnimationFrame(draw);
+  }
+}
+new ResizeObserver(() => { if (stillMode()) paintWave(true); }).observe(canvas);
+window.addEventListener('enadorry-motion', scheduleDisplay);
+reduced.addEventListener('change', scheduleDisplay);
+document.addEventListener('visibilitychange', scheduleDisplay);
+scheduleDisplay();
 if(document.modelContext?.registerTool){try{Promise.resolve(document.modelContext.registerTool({name:'configure_music',title:'音をちょっと変えてみる',description:'Change the musical preset, tempo, density and reverb using the player controls. Does not start audio.',inputSchema:{type:'object',properties:{preset:{type:'string',enum:['float','groove','dream']},tempo:{type:'number',minimum:55,maximum:140},density:{type:'number',minimum:10,maximum:100},space:{type:'number',minimum:0,maximum:100}},additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute(input){if(!input||typeof input!=='object'||Array.isArray(input))throw new Error('Expected an object');for(const [k,v]of Object.entries(input)){if(k==='preset'){if(!presets[v])throw new Error('Invalid preset');}else{const bounds={tempo:[55,140],density:[10,100],space:[0,100]}[k];if(!bounds||typeof v!=='number'||!Number.isFinite(v)||v<bounds[0]||v>bounds[1])throw new Error('Invalid '+k);}}if(state.chaos)setChaos(false);if(input.preset)selectPreset(input.preset);for(const k of ['tempo','density','space'])if(input[k]!==undefined)update(k,input[k]);return {...state,playing};}})).catch(()=>{});}catch{}}
 
