@@ -3,7 +3,19 @@ const params={water:.7,chime:.55,ice:.4,variation:.35,volume:.6};
 try{const saved=JSON.parse(localStorage.getItem('water-garden-v2')||'null');if(saved){for(const k of Object.keys(params))if(Number.isFinite(saved[k]))params[k]=Math.min(1,Math.max(0,saved[k]));if([0,1,2,3].includes(saved.scene))scene=saved.scene;}}catch{}
 function save(){try{localStorage.setItem('water-garden-v2',JSON.stringify({...params,scene}));}catch{}}
 function send(p){node?.port.postMessage({type:'params',p});}
-function paint(){for(const k of Object.keys(params)){const value=Math.round(params[k]*100);$(k).value=value;$(k+'Out').textContent=k==='variation'?(value<30?'おだやか':value<65?'ゆっくり':'多彩に'):value+'%';}document.querySelectorAll('[data-scene]').forEach(b=>b.classList.toggle('selected',+b.dataset.scene===scene));$('sceneLabel').textContent=['静かな渓流','雨に包まれる庭','ゆらぐ波打ち際','水滴と氷のきらめき'][scene];}
+function paint(){
+  for(const k of Object.keys(params)){
+    const value=Math.round(params[k]*100);
+    $(k).value=value;
+    $(k+'Out').textContent=k==='variation'?(value<30?'おだやか':value<65?'ゆっくり':'多彩に'):value+'%';
+  }
+  document.querySelectorAll('[data-scene]').forEach(button=>{
+    const selected=Number(button.dataset.scene)===scene;
+    button.classList.toggle('selected',selected);
+    button.setAttribute('aria-pressed',String(selected));
+  });
+  $('sceneLabel').textContent=['静かな渓流','雨に包まれる庭','ゆらぐ波打ち際','水滴と氷のきらめき'][scene];
+}
 function ui(){ $('play').innerHTML=running?'Ⅱ <span>ひと休みする</span>':'▶ <span>音を流してみる</span>';$('play').setAttribute('aria-label',running?'一時停止':'再生');$('live').textContent=running?'● 音の庭を生成中':'● 静寂のなかで';$('live').classList.toggle('active',running);document.body.classList.toggle('playing',running); }
 async function init(){const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)throw new Error('このブラウザは音声合成に対応していません。');ctx=new Audio();await ctx.resume();if(!ctx.audioWorklet)throw new Error('HTTPSで、音声合成に対応したブラウザから開いてください。');await ctx.audioWorklet.addModule('sound.js');node=new AudioWorkletNode(ctx,'garden-sound',{numberOfInputs:0,numberOfOutputs:1,outputChannelCount:[2]});gain=ctx.createGain();gain.gain.value=0;const limiter=ctx.createDynamicsCompressor();limiter.threshold.value=-12;limiter.knee.value=12;limiter.ratio.value=5;limiter.attack.value=.005;limiter.release.value=.25;node.connect(limiter).connect(gain).connect(ctx.destination);send({...params,scene});node.port.onmessage=e=>{if(e.data.type==='ended'){pause();$('message').textContent='おやすみタイマーで再生を終了しました。';}};ctx.addEventListener('statechange',()=>{if(ctx.state==='suspended'&&running){elapsed+=performance.now()-started;running=false;ui();$('message').textContent='ブラウザが音を止めたようです。続けるときは、再生ボタンをどうぞ。';}});}
 async function pause(){if(!running)return;elapsed+=performance.now()-started;running=false;ui();gain.gain.cancelScheduledValues(ctx.currentTime);gain.gain.setTargetAtTime(0,ctx.currentTime,.15);await new Promise(r=>setTimeout(r,800));if(!running&&ctx.state==='running')await ctx.suspend();}

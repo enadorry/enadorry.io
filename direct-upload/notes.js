@@ -1,8 +1,46 @@
 (()=>{
  const list=document.getElementById('note-list'),status=document.getElementById('note-status'),dialog=document.getElementById('note-reader');if(!list||!dialog)return;let items=[],expanded=false,previous;
  const text=(tag,value,cls)=>{const n=document.createElement(tag);n.textContent=value;if(cls)n.className=cls;return n;};
- function render(){list.replaceChildren();for(const item of items.slice(0,expanded?25:6)){const row=text('li','','note-entry');const button=text('button','','note-open');button.type='button';button.append(text('span',item.date?new Date(item.date).toLocaleDateString('ja-JP'): 'NOTE','note-date'),text('span',item.title,'note-title'),text('span',item.excerpt,'note-excerpt'),text('span','読む ↗','note-read'));button.addEventListener('click',()=>{previous=button;document.getElementById('note-reader-title').textContent=item.title;document.getElementById('note-reader-body').textContent=item.body;document.getElementById('note-reader-notice').textContent=item.full?'':'noteに書いた話の、最初の部分です。続きが気になったらnoteへどうぞ。';document.getElementById('note-reader-source').href=item.url;dialog.showModal();document.getElementById('note-reader-close').focus();});row.append(button);list.append(row);}document.getElementById('note-more').hidden=items.length<=6;}
- document.getElementById('note-more').addEventListener('click',e=>{expanded=!expanded;render();e.currentTarget.textContent=expanded?'表示を少なくする':'記事をもっと読む ↗';});
+ const more = document.getElementById('note-more');
+ more.setAttribute('aria-controls', list.id);
+ function openArticle(item, button) {
+   previous = button;
+   document.getElementById('note-reader-title').textContent = item.title;
+   document.getElementById('note-reader-body').textContent = item.body;
+   document.getElementById('note-reader-notice').textContent = item.full ? '' : 'noteに書いた話の、最初の部分です。続きが気になったらnoteへどうぞ。';
+   document.getElementById('note-reader-source').href = item.url;
+   dialog.showModal();
+   document.getElementById('note-reader-close').focus();
+ }
+ function render() {
+   if (items.length <= 6) expanded = false;
+   list.replaceChildren();
+   for (const item of items.slice(0, expanded ? 25 : 6)) {
+     const row = text('li', '', 'note-entry');
+     const button = text('button', '', 'note-open');
+     button.type = 'button';
+     button.setAttribute('aria-haspopup','dialog');
+     const date = new Date(item.date);
+     const dateLabel = item.date && Number.isFinite(date.getTime()) ? date.toLocaleDateString('ja-JP') : 'NOTE';
+     button.append(
+       text('span', dateLabel, 'note-date'),
+       text('span', item.title, 'note-title'),
+       text('span', item.excerpt, 'note-excerpt'),
+       text('span', '読む ↗', 'note-read')
+     );
+     button.addEventListener('click', () => openArticle(item, button));
+     row.append(button);
+     list.append(row);
+   }
+   more.hidden = items.length <= 6;
+   more.setAttribute('aria-expanded', String(expanded));
+   more.textContent = expanded ? '表示を少なくする' : '記事をもっと読む ↗';
+ }
+ more.addEventListener('click', () => {
+   expanded = !expanded;
+   render();
+   if (expanded) list.children[6]?.querySelector('button')?.focus();
+ });
  document.getElementById('note-reader-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});dialog.addEventListener('close',()=>previous?.focus());
  let endpoint,loading=false,lastCheck=0,signature='';
  async function refresh(){

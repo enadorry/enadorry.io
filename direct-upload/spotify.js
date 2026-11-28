@@ -18,10 +18,13 @@
   }
   async function load() {
     try {
-      const config = await getConfig();
       let data;
-      try { data = await getData(config.endpoint); }
-      catch { data = await getData('/spotify-history.json'); }
+      try {
+        const config = await getConfig();
+        data = await getData(config.endpoint);
+      } catch {
+        data = await getData('/spotify-history.json');
+      }
       const rows = document.createDocumentFragment();
       for (const item of data.items.slice(0, 50)) {
         if (typeof item.name !== 'string') continue;
@@ -44,7 +47,8 @@
       }
       if (rows.childNodes.length) {
         list.replaceChildren(rows); status.textContent = '';
-      } else if (!list.children.length) {
+      } else {
+        list.replaceChildren();
         status.textContent = data.status === 'not_connected' ? 'Spotifyにつなぐ準備をしています。' : data.status === 'reconnect_required' ? 'Spotifyにつなぎ直すのを待っています。' : '聴いた曲が、ここに並びます。今はまだ空っぽです。';
       }
     } catch {
@@ -59,6 +63,9 @@
         const url = new URL(c.endpoint, location.origin);
         if (url.protocol !== 'https:' && url.origin !== location.origin) throw new Error('Invalid endpoint');
         return { endpoint: url.href };
+      }).catch(error => {
+        configPromise = undefined;
+        throw error;
       });
     return configPromise;
   }
