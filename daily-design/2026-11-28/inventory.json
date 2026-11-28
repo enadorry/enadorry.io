@@ -116,7 +116,32 @@
       "yume",
       "stella",
       "veil"
-    ]
+    ],
+    "url": "https://enadorry.dev/h2orobot.html",
+    "headings": [
+      "H2OROBOT",
+      "操作は、やりやすいほうで。",
+      "DualSenseなら、こんな操作",
+      "まずWi-Fi。それからアプリ。",
+      "自分の環境で動かしてみるなら。"
+    ],
+    "captions": [
+      "仕組みが見えるように、READMEをもとに描いた図です。アプリの実際の画面とは異なります。"
+    ],
+    "controls": [
+      {
+        "id": "motion",
+        "type": "button",
+        "label": "動きを止める"
+      }
+    ],
+    "socialVisibility": {},
+    "source": {
+      "commit": "5ccb520af3dd899f2cb715481917f2fec6f4fe22",
+      "file": "direct-upload/h2orobot.html",
+      "http": 200,
+      "matchesWithLineEndingsNormalized": true
+    }
   },
   "companions.html": {
     "title": "Companions — enadorry",
@@ -255,7 +280,177 @@
       "yume",
       "stella",
       "veil"
-    ]
+    ],
+    "url": "https://enadorry.dev/companions.html",
+    "headings": [
+      "Companions",
+      "うちの子の庭."
+    ],
+    "captions": [],
+    "controls": [
+      {
+        "id": "motion",
+        "type": "button",
+        "label": "動きを止める"
+      },
+      {
+        "id": "hero-interact",
+        "type": "button",
+        "label": "シズクちゃんに話しかける"
+      },
+      {
+        "id": "companion-shuffle",
+        "type": "button",
+        "label": "別の子・画風に切り替える ↗"
+      },
+      {
+        "id": "companion-toggle",
+        "type": "button",
+        "label": "カーソルのShizukuを表示 / 非表示"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "クロエに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "ノートに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "パラドクスに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "みゅうに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "はんだに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "シンセに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "マーブルに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "ノイズに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "エラーに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "ミントに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "Otoに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "Mintoに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "Shizukuに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "Azureに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "リボンに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "Liliaに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "Soraに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "よぞらに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "ましろに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "クロノに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "メビウスに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "ミミに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "ユメに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "ステラに話しかける"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "ヴェイルに話しかける"
+      },
+      {
+        "id": "garden-reset",
+        "type": "button",
+        "label": "自由に遊ばせる ↗"
+      },
+      {
+        "id": "garden-pause",
+        "type": "button",
+        "label": "動きを止める"
+      }
+    ],
+    "socialVisibility": {},
+    "source": {
+      "commit": "5ccb520af3dd899f2cb715481917f2fec6f4fe22",
+      "file": "direct-upload/companions.html",
+      "http": 200,
+      "matchesWithLineEndingsNormalized": true
+    }
   },
   "interactive.html": {
     "title": "Unityでの制作 — enadorry",
@@ -370,7 +565,29 @@
       "yume",
       "stella",
       "veil"
-    ]
+    ],
+    "url": "https://enadorry.dev/interactive.html",
+    "headings": [
+      "Unityでの制作",
+      "H2OROBOT"
+    ],
+    "captions": [
+      "ゲーム画面は未掲載です。入力と動きを表すオリジナルのコンセプト図を展示しています。"
+    ],
+    "controls": [
+      {
+        "id": "motion",
+        "type": "button",
+        "label": "動きを止める"
+      }
+    ],
+    "socialVisibility": {},
+    "source": {
+      "commit": "5ccb520af3dd899f2cb715481917f2fec6f4fe22",
+      "file": "direct-upload/interactive.html",
+      "http": 200,
+      "matchesWithLineEndingsNormalized": true
+    }
   },
   "index.html": {
     "title": "enadorry — 気になったものを、つくってみる",
@@ -579,7 +796,144 @@
       "yume",
       "stella",
       "veil"
-    ]
+    ],
+    "url": "https://enadorry.dev/",
+    "headings": [
+      "enadorry",
+      "つくっているもの",
+      "H2OROBOT",
+      "気になったら、ちょっと触ってみる。",
+      "音の庭",
+      "水音の庭",
+      "最近聴いた曲",
+      "考えごとの記録",
+      "えなどりです",
+      "egawa shuuhei",
+      "もう少し、えなどりのこと",
+      "何かあれば、こちらへ。",
+      "相互リンク募集中.",
+      ""
+    ],
+    "captions": [
+      "H2OROBOT画面で操作すると、水の中のロボットが動く。UnityとESP32をつないでいます。作品を見る ↗"
+    ],
+    "controls": [
+      {
+        "id": "motion",
+        "type": "button",
+        "label": "動きを止める"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "01 / ROBOTICS水中ロボット"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "02 / INTERACTION触って遊べるもの"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "03 / COMPANIONSうちの子たちの庭"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "04 / LOCAL AI会話するプログラム"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "05 / SOUNDSCAPE音の庭"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "06 / JOURNAL考えごとの記録"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "01H2OROBOTRobotics · Unity / ESP32"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "02InteractionGames · Unity / C#"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "03CompanionsDigital life · Web"
+      },
+      {
+        "id": "sound-mode",
+        "type": "select",
+        "label": "流す音水音の庭EVERFLOW"
+      },
+      {
+        "id": "sound-volume",
+        "type": "range",
+        "label": "環境音の音量"
+      },
+      {
+        "id": "sound-auto",
+        "type": "checkbox",
+        "label": "アクセス時に再生する"
+      },
+      {
+        "id": "note-more",
+        "type": "button",
+        "label": "記事をもっと読む ↗"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "何をつくってるの？＋"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "コードものぞける？＋"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "どこから連絡すればいい？＋"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "相互リンクしてもいい？＋"
+      },
+      {
+        "id": "note-reader-close",
+        "type": "button",
+        "label": "閉じる ×"
+      },
+      {
+        "id": "sound-play",
+        "type": "button",
+        "label": "音を再生 ▷"
+      },
+      {
+        "id": "sound-mute",
+        "type": "button",
+        "label": "環境音をミュート"
+      }
+    ],
+    "socialVisibility": {
+      "x": "hidden",
+      "instagram": "hidden"
+    },
+    "source": {
+      "commit": "5ccb520af3dd899f2cb715481917f2fec6f4fe22",
+      "file": "direct-upload/index.html",
+      "http": 200,
+      "matchesWithLineEndingsNormalized": true
+    }
   },
   "sound-apps/water/index.html": {
     "title": "水音の庭 — 水の音でも流そうかな。",
@@ -627,7 +981,87 @@
       "app.js"
     ],
     "counter": [],
-    "characters": []
+    "characters": [],
+    "url": "https://enadorry.dev/sound-apps/water/index.html",
+    "headings": [
+      "水の音でも、流そうかな。",
+      "今日は、どの音にしよう。"
+    ],
+    "captions": [],
+    "controls": [
+      {
+        "id": "motion",
+        "type": "button",
+        "label": "動きを止める"
+      },
+      {
+        "id": "play",
+        "type": "button",
+        "label": "再生"
+      },
+      {
+        "id": "refresh",
+        "type": "button",
+        "label": "新しい音の景色"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "01 水滴の庭"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "02 渓流"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "03 雨の庭"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "04 波打ち際"
+      },
+      {
+        "id": "water",
+        "type": "range",
+        "label": "水の音 WATER70%"
+      },
+      {
+        "id": "chime",
+        "type": "range",
+        "label": "ガラス風鈴 GLASS CHIMES55%"
+      },
+      {
+        "id": "ice",
+        "type": "range",
+        "label": "氷のきらめき ICE CLINKS40%"
+      },
+      {
+        "id": "variation",
+        "type": "range",
+        "label": "景色の変化 EVOLUTIONゆっくり"
+      },
+      {
+        "id": "volume",
+        "type": "range",
+        "label": "全体の音量 VOLUME60%"
+      },
+      {
+        "id": "timer",
+        "type": "select",
+        "label": "おやすみタイマー 無制限15分30分60分120分"
+      }
+    ],
+    "socialVisibility": {},
+    "source": {
+      "commit": "5ccb520af3dd899f2cb715481917f2fec6f4fe22",
+      "file": "direct-upload/sound-apps/water/index.html",
+      "http": 200,
+      "matchesWithLineEndingsNormalized": true
+    }
   },
   "local-ai.html": {
     "title": "ローカルLLM会話Bot — enadorry",
@@ -734,7 +1168,28 @@
       "yume",
       "stella",
       "veil"
-    ]
+    ],
+    "url": "https://enadorry.dev/local-ai.html",
+    "headings": [
+      "ローカルLLM会話Bot"
+    ],
+    "captions": [
+      "実際の会話ログではなく、メッセージの往復を表すオリジナルのコンセプト図です。"
+    ],
+    "controls": [
+      {
+        "id": "motion",
+        "type": "button",
+        "label": "動きを止める"
+      }
+    ],
+    "socialVisibility": {},
+    "source": {
+      "commit": "5ccb520af3dd899f2cb715481917f2fec6f4fe22",
+      "file": "direct-upload/local-ai.html",
+      "http": 200,
+      "matchesWithLineEndingsNormalized": true
+    }
   },
   "sound-apps/focus/index.html": {
     "title": "EVERFLOW | 終わらない音楽",
@@ -786,7 +1241,102 @@
       "app.js?v=3"
     ],
     "counter": [],
-    "characters": []
+    "characters": [],
+    "url": "https://enadorry.dev/sound-apps/focus/index.html",
+    "headings": [
+      "次は、どんな音かな。",
+      "音をちょっと変えてみる"
+    ],
+    "captions": [],
+    "controls": [
+      {
+        "id": "motion",
+        "type": "button",
+        "label": "動きを止める"
+      },
+      {
+        "id": "play",
+        "type": "button",
+        "label": "▶演奏をはじめる"
+      },
+      {
+        "id": "renew",
+        "type": "button",
+        "label": "新しい旋律へ"
+      },
+      {
+        "id": "volume",
+        "type": "range",
+        "label": "音量"
+      },
+      {
+        "id": "chaos",
+        "type": "checkbox",
+        "label": "4拍ごとに全ランダムCHAOS"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "01漂うAMBIENT JAZZ"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "02揺れるELECTRONIC GROOVE"
+      },
+      {
+        "id": null,
+        "type": "button",
+        "label": "03夢を見るNOCTURNAL KEYS"
+      },
+      {
+        "id": "tempo",
+        "type": "range",
+        "label": "テンポ 88 BPM"
+      },
+      {
+        "id": "density",
+        "type": "range",
+        "label": "音数 45%"
+      },
+      {
+        "id": "space",
+        "type": "range",
+        "label": "残響 60%"
+      },
+      {
+        "id": "keys",
+        "type": "checkbox",
+        "label": "鍵盤"
+      },
+      {
+        "id": "synth",
+        "type": "checkbox",
+        "label": "電子音"
+      },
+      {
+        "id": "bass",
+        "type": "checkbox",
+        "label": "ベース"
+      },
+      {
+        "id": "drums",
+        "type": "checkbox",
+        "label": "ドラム"
+      },
+      {
+        "id": null,
+        "type": "summary",
+        "label": "どこから音が来てるの？"
+      }
+    ],
+    "socialVisibility": {},
+    "source": {
+      "commit": "5ccb520af3dd899f2cb715481917f2fec6f4fe22",
+      "file": "direct-upload/sound-apps/focus/index.html",
+      "http": 200,
+      "matchesWithLineEndingsNormalized": true
+    }
   },
   "underwater.html": {
     "title": "水中ロボット制御 — enadorry",
@@ -893,7 +1443,28 @@
       "yume",
       "stella",
       "veil"
-    ]
+    ],
+    "url": "https://enadorry.dev/underwater.html",
+    "headings": [
+      "水中ロボット制御"
+    ],
+    "captions": [
+      "実機写真は未掲載です。通信と制御を表すオリジナルのコンセプト図を展示しています。"
+    ],
+    "controls": [
+      {
+        "id": "motion",
+        "type": "button",
+        "label": "動きを止める"
+      }
+    ],
+    "socialVisibility": {},
+    "source": {
+      "commit": "5ccb520af3dd899f2cb715481917f2fec6f4fe22",
+      "file": "direct-upload/underwater.html",
+      "http": 200,
+      "matchesWithLineEndingsNormalized": true
+    }
   },
   "counterLogic": "(()=>{\n const themes=['kasuterura-4','booru-jaypee','booru-touhoulat'];\n // Assign just one URL, so theme selection does not issue two counting requests.\n const theme=themes[Math.floor(Math.random()*themes.length)];\n document.querySelectorAll('.moe-counter-image[data-counter-src]').forEach(image=>{\n  const url=new URL(image.dataset.counterSrc);url.searchParams.set('theme',theme);image.src=url.href;\n  image.addEventListener('error',()=>{image.alt='アクセスカウンターを読み込めませんでした';},{once:true});\n });\n})();\n"
 }

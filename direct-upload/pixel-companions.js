@@ -22,7 +22,10 @@
       image.src='/assets/room/'+canvas.dataset.character+'-idle.webp';
     });
   }
-  function update(){section.classList.toggle('is-running',visible&&!document.hidden&&!reduced.matches);}
+  function update(){
+    const stopped = reduced.matches || document.documentElement.hasAttribute('data-still');
+    section.classList.toggle('is-running',visible && !document.hidden && !stopped);
+  }
   if('IntersectionObserver' in window){
     const observer=new IntersectionObserver(entries=>{
       visible=entries[0].isIntersecting;
@@ -31,4 +34,5 @@
   }else{visible=true;load();update();}
   document.addEventListener('visibilitychange',update);
   reduced.addEventListener('change',update);
+  window.addEventListener('enadorry-motion',update);
 })();

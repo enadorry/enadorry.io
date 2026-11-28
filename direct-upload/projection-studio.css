@@ -1,0 +1,133 @@
+/* The image and its commentary share one screen. Technical references sit below. */
+.detail-path { margin: 1.75rem 0 1rem }
+.detail-path a { color: var(--soft); font-size: .94rem }
+.essay.detail-studio { padding: 0; margin: 0 0 4rem; border: 0 }
+.detail-screen, .sound-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  border: 1px solid var(--line);
+  background: var(--card);
+}
+.detail-screen > *, .sound-stage > *, .technical-manual > * { min-width: 0 }
+.project-image, .encounter {
+  display: grid;
+  align-items: center;
+  min-height: 20rem;
+  margin: 0;
+  padding: clamp(1.2rem, 3vw, 2.5rem);
+  background: #100d17;
+}
+.project-image img { display: block; width: 100% }
+.project-image figcaption {
+  margin-top: .8rem;
+  color: var(--soft);
+  font-size: .875rem;
+}
+.screen-notes, .sound-title, .audio-monitor { padding: clamp(1.5rem, 3.6vw, 3.5rem) }
+.detail-screen { grid-template-areas: "image title" "image notes"; grid-template-rows: auto 1fr }
+.detail-screen > .project-image, .detail-screen > .encounter { grid-area: image }
+.detail-title { grid-area: title; margin: 0; padding: clamp(1.5rem, 3.6vw, 3.5rem) clamp(1.5rem, 3.6vw, 3.5rem) 0 }
+.screen-notes { grid-area: notes; padding-top: .5rem }
+.detail-title h1, .sound-title h1 { font-size: clamp(2.35rem, 5.5vw, 5rem); line-height: 1.08 }
+.detail-title > p { color: var(--hot) }
+.detail-studio p { text-wrap: pretty }
+.studio-record, .related-production, .next-projection, .technical-manual { margin: 2.3rem 0 }
+.studio-record { padding: 1.35rem 0; border-block: 1px solid var(--line) }
+.studio-record dl { margin: 0 0 1rem; display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .25rem 1.5rem }
+.studio-record dt { font: .78rem/1.75 ui-monospace, monospace; color: var(--soft); letter-spacing: .04em }
+.studio-record dd { margin: 0; font-size: .95rem }
+.studio-record a { display: inline-block; margin: .25rem 1.25rem .25rem 0 }
+.technical-manual { display: grid; grid-template-columns: minmax(13rem, .45fr) minmax(0, 1.55fr); gap: clamp(1.5rem, 5vw, 4rem) }
+.manual-index { align-self: start; padding-top: .75rem }
+.manual-index a { display: block; border-bottom: 1px solid var(--line); padding: .75rem 0 }
+.manual-chapter { padding: .8rem 0 1.6rem }
+.manual-chapter + .manual-chapter { border-top: 1px solid var(--line) }
+.essay .manual-chapter h2 { font-size: clamp(1.4rem, 3vw, 2.15rem); scroll-margin: 1.4rem }
+.control-table { width: 100%; border-collapse: collapse }
+.control-table td, .control-table th { border-bottom: 1px solid var(--line); padding: .6rem; text-align: left }
+.control-table th { width: 35% }
+.feature-lines, .setup-steps { padding-left: 1.5rem }
+.project-note { padding: 1rem; background: var(--card) }
+.next-projection > a, .related-production a {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: .65rem 1.5rem;
+  padding: 1rem 0; border-block: 1px solid var(--line);
+}
+.next-projection span:first-child, .related-production > span { color: var(--soft); font-size: .87rem }
+.related-production h2, .related-production h3 { margin: .2rem 0 }
+.encounter { grid-template-columns: minmax(0, 1fr) }
+.encounter .hero-companion { min-width: 0 }
+.encounter .hero-interact { margin: auto; height: clamp(18rem, 34vw, 28rem) }
+.encounter .hero-character { width: 100%; height: 100%; max-height: clamp(18rem, 34vw, 28rem) }
+.companion-selector a { display: inline-block; margin-top: 1rem }
+.detail-studio .collection { margin-top: 3rem }
+.detail-studio .collection .section-top, .detail-studio .garden-count { color: var(--soft); font: .8rem/1.65 ui-monospace, monospace }
+.detail-studio .collection .section-top { display: flex; flex-wrap: wrap; justify-content: space-between }
+.detail-studio .garden-controls p, .detail-studio .garden-controls button { font-size: .9rem }
+.detail-studio .garden-time, .detail-studio .garden-caption { font-size: .72rem }
+.detail-studio .garden-name { font-size: .72rem }
+.caption .related-slide { display: inline-block; margin: .5rem 0 .2rem 1rem; color: var(--soft); font-size: .94rem }
+
+/* The playback monitor precedes the mixing desk in both sound applications. */
+.sound-studio { margin: 2rem 0 4rem }
+.sound-stage { background: #100d17 }
+.sound-title .brand { display: block; color: var(--hot); font: 600 .92rem/1.5 ui-monospace, monospace; letter-spacing: .08em }
+.sound-title .brand span { display: block; color: var(--soft); font-size: .75rem }
+.sound-title { container-type: inline-size }
+.sound-studio .sound-title h1 { font-size: clamp(2rem, 12.7cqi, 4.4rem); margin: .55em 0 }
+.sound-title p { max-width: 34em; color: var(--soft) }
+.channel.audio-monitor { margin: 0; padding: clamp(1.25rem, 3.4vw, 3rem); background: var(--card); border: none }
+.audio-monitor .eyebrow, .audio-settings > .eyebrow { color: var(--soft); font: .8rem/1.8 ui-monospace, monospace; letter-spacing: .08em }
+.monitor-info, .wave-metadata { display: flex; justify-content: space-between; gap: 1rem; align-items: center }
+.monitor-info { padding: .6rem 0; border-bottom: 1px solid var(--line) }
+.monitor-info span:last-child, .wave-metadata { font-family: ui-monospace, monospace; font-variant-numeric: tabular-nums }
+.playback-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: 1rem 0 }
+.playback-actions button { margin: 0; min-height: 44px }
+.playback-actions .play { padding: .7rem 1.3rem; background: var(--hot); color: #241322; border-color: var(--hot); font-weight: 700 }
+.playback-actions button + button { min-width: 44px; background: #17121e }
+.scene-name { margin: 1rem 0; font-size: 1.1rem }
+.audio-credit { display: flex; flex-wrap: wrap; gap: .75rem; color: var(--soft); font: .76rem/1.55 ui-monospace, monospace }
+.wave-screen { background: #121018; padding: .7rem; margin-top: .7rem }
+.wave-screen canvas { height: 6rem }
+.wave-metadata { flex-wrap: wrap; gap: .25rem 1rem; color: var(--soft); font-size: .78rem }
+.master-volume { display: grid; align-items: center; grid-template-columns: auto minmax(0, 1fr) auto; gap: .8rem }
+.master-volume label, .master-volume input { margin: 0; width: 100% }
+.channel.audio-settings { padding: 0; margin: 2.25rem 0 0; border-top: none }
+.audio-settings h2 { margin: .35rem 0; font-size: clamp(1.5rem, 3.5vw, 2.5rem) }
+.audio-settings fieldset { min-width: 0; border: 0; border-top: 1px solid var(--line); padding: .85rem 0; margin: 1.45rem 0 }
+.audio-settings legend { padding-right: 1rem; font-weight: 700 }
+.sound-presets button, .instruments label {
+  display: inline-flex; align-items: center; flex-wrap: wrap; gap: .5rem; min-height: 44px;
+  margin: .2rem .4rem .2rem 0; padding: .5rem .9rem;
+}
+.sound-presets button small { color: inherit; font-size: .73rem }
+.mixer-controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(11rem,100%),1fr)); gap: .8rem }
+.mixer-control, .channel .mixer-controls > label {
+  display: block; padding: .9rem; margin: 0; background: var(--card);
+}
+.channel .mixer-control label, .mixer-controls label > span {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .45rem; margin: 0;
+}
+.mixer-controls small { font-size: .7rem; color: var(--soft) }
+.mixer-controls output { margin-inline-start: auto; font-variant-numeric: tabular-nums }
+.mixer-controls input[type=range] { display: block; width: 100%; margin: .6rem 0 0; min-height: 28px }
+.mixer-control p { display: flex; justify-content: space-between; margin: .25rem 0 0; color: var(--soft); font-size: .78rem }
+.chaos-controls { margin: 1rem 0; padding: .75rem 1rem; border-inline-start: 3px solid var(--hot); background: var(--card) }
+.chaos-controls strong { margin-inline-start: .5rem }
+.chaos-controls p, .broadcast-note { color: var(--soft) }
+.broadcast-note { margin: 2rem 0; padding-block: 1rem; border-top: 1px solid var(--line) }
+.broadcast-note > span { display: block; margin-top: .7rem; font-size: .8rem }
+@media (max-width: 720px) {
+  .technical-manual, .detail-screen, .sound-stage { grid-template-columns: minmax(0, 1fr) }
+  .technical-manual { gap: .5rem }
+  .project-image, .encounter { min-height: auto }
+  .detail-screen { grid-template-areas: "title" "image" "notes"; grid-template-rows: auto }
+  .detail-title { margin: 0; padding: 1.2rem }
+  .detail-title p { margin-bottom: 0 }
+  .studio-record dl { grid-template-columns: 1fr; gap: 0 }
+  .studio-record dd { margin-bottom: .7rem }
+  .sound-title, .screen-notes { padding: 1.2rem }
+  .sound-studio .sound-title h1 { font-size: clamp(2rem, 10cqi, 3rem) }
+  .sound-title h1 br { display: none }
+  .detail-studio .garden-controls > div { flex-wrap: wrap }
+  .caption .related-slide { margin-inline-start: .5rem }
+}
